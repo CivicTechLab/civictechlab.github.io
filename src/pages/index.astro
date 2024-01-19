@@ -17,9 +17,9 @@ const data = entry.data.home;
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <main class="container">
-      <div class="d-flex justify-content-center pb-md-4 py-4">
-        <Image class="rounded" src={Logo} alt="CivicTech Lab" height={360} format="gif" />
+    <main class="container" style="max-width: 960px;">
+      <div class="d-flex justify-content-center pb-4">
+        <Image class="rounded mw-100" src={Logo} alt="CivicTech Lab" />
       </div>
       <div class="row">
         {
@@ -41,6 +41,12 @@ const data = entry.data.home;
   </body>
 </Layout>
 <style>
+  img[alt='CivicTech Lab'] {
+    height: auto;
+    width: auto;
+    max-height: 348px;
+  }
+
   img.card-img-top {
     object-fit: cover;
     height: 200px;
