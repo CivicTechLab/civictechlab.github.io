@@ -3,6 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Layout from '../layouts/Layout.astro';
+
+import { getEntry } from 'astro:content';
+const { data } = await getEntry('home', 'home');
 ---
 
 <!doctype html>
@@ -12,43 +15,19 @@ import Layout from '../layouts/Layout.astro';
   </head>
   <body>
     <main class="container">
-      <div class="d-flex flex-column">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">OUR VISION</h5>
-            <p class="card-text">
-              An interdisciplinary, cross-sectoral and collaborative approach to tackling civic challenges.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">OUR MISSION</h5>
-            <p class="card-text">
-              Generate the highest quality research about Civic Technology. Strengthen the civic core of public-sector,
-              private-sector actors and citizens. Design critically processes and technologies for the public good.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">OUR TEAM</h5>
-            <p class="card-text">
-              CivicTech Lab at National University of Singapore is a research hub led by Dr. Weiyu Zhang. We are a team
-              of social scientists, computer scientists, and digital cultural analysts.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">OUR HISTORY</h5>
-            <p class="card-text">
-              The CivicTech Lab (formerly the Media Psychology Lab) was established in 2008 by Dr. Weiyu Zhang, as a
-              central location for research projects on civic engagement and information communication technology
-              conducted by the team.
-            </p>
-          </div>
-        </div>
+      <div class="row">
+        {
+          data.map((d) => (
+            <div class="col-md-6 p-2">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">{d.title}</h5>
+                  <p class="card-text">{d.description}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
       </div>
     </main>
     <Footer />
