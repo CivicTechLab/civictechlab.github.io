@@ -19,14 +19,14 @@ const data = entry.data.home;
   <body>
     <main class="container">
       <div class="d-flex justify-content-center pb-md-4 py-4">
-        <Image src={Logo} alt="CivicTech Lab" height={360} format="gif" />
+        <Image class="rounded" src={Logo} alt="CivicTech Lab" height={360} format="gif" />
       </div>
       <div class="row">
         {
           data.map((d) => (
             <div class="col-md-6 p-2">
               <div class="card h-100 text-center">
-                {d.imgSrc && <img src={d.imgSrc} class="card-img-top object-fit-scale" />}
+                {d.imgSrc && <img src={d.imgSrc} class="card-img-top" />}
                 <div class="card-body">
                   <h5 class="card-title">{d.title}</h5>
                   <p class="card-text">{d.description}</p>
@@ -42,6 +42,7 @@ const data = entry.data.home;
 </Layout>
 <style>
   img.card-img-top {
+    object-fit: cover;
     height: 200px;
   }
 </style>
