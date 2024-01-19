@@ -26,4 +26,18 @@ const homeCollection = defineCollection({
   }),
 });
 
-export const collections = { blog: blogCollection, home: homeCollection };
+const peopleCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    people: z.array(
+      z.object({
+        name: z.string(),
+        description: z.string(),
+        imgSrc: z.string().optional(),
+        website: z.string().url().optional(),
+      }),
+    ),
+  }),
+});
+
+export const collections = { blog: blogCollection, home: homeCollection, people: peopleCollection };

@@ -1,0 +1,10 @@
+{
+  "people": [
+    {
+      "name": "Me",
+      "description": "You",
+      "imgSrc": "/people/charlene.png",
+      "website": "https://google.com"
+    }
+  ]
+}
