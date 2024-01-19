@@ -8,14 +8,14 @@ const { name, description, imgSrc, website } = person;
     <div class="card-body">
       <h2 class="h4 text-center">{name}</h2>
     </div>
-    <div class="ratio ratio-1x1">
-      <img class="card-img object-fit-cover rounded-0" src={imgSrc} />
+    <div class="ratio ratio-1x1 bg-grey">
+      <img class="card-img rounded-0 object-fit-scale" src={imgSrc} />
     </div>
     <div class="card-body">
       <p class="card-text">{description}</p>
       {
         website && (
-          <a href={website} class="btn btn-outline-primary btn-sm">
+          <a href={website} target="_blank" class="btn btn-outline-primary btn-sm">
             Website
           </a>
         )

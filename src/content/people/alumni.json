@@ -1,10 +1,32 @@
 {
   "people": [
     {
-      "name": "Me",
-      "description": "You",
-      "imgSrc": "/people/charlene.png",
-      "website": "https://google.com"
+      "name": "Lize Zhang",
+      "description": "Master Graduate, 2016; currently Founder of Peach Says ",
+      "imgSrc": "/people/lize-zhang.png"
+    },
+    {
+      "name": "Dr. Simon Perrault",
+      "description": "Postdoc Researcher, 2014-2015; currently Assistant Professor, Singapore University of Science and Technology",
+      "imgSrc": "/people/simon-perrault.png",
+      "website": "https://istd.sutd.edu.sg/people/faculty/simon-perrault#biography"
+    },
+    {
+      "name": "Jodie Luu",
+      "description": "Master Graduate, 2013; currently Lecturer at National University of Singapore",
+      "imgSrc": "/people/jodie-luu.png",
+      "website": "https://www.nus.edu.sg/celc/staff/jodieluu.html"
+    },
+    {
+      "name": "Catherine Candano",
+      "description": "Master Graduate, 2012; currently Head, Strategic Data Partnerships Development, Google Asia Pacific",
+      "imgSrc": "/people/catherine-candano.png"
+    },
+    {
+      "name": "Lingzi Zhang",
+      "description": "Master Graduate, 2012; currently Product Director at Ola Chat",
+      "imgSrc": "/people/lingzi-zhang.png",
+      "website": "https://www.linkedin.com/in/lizziezhang/"
     }
   ]
 }

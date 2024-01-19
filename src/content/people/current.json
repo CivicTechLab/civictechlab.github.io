@@ -1,10 +1,20 @@
 {
   "people": [
     {
-      "name": "Me",
-      "description": "You",
-      "imgSrc": "/people/charlene.png",
-      "website": "https://google.com"
+      "name": "Dr. Weiyu Zhang",
+      "description": "Founder & Director; Department of Communications and New Media, National University of Singapore",
+      "imgSrc": "/people/weiyu-zhang.png",
+      "website": "http://www.weiyuzhang.net/"
+    },
+    {
+      "name": "Jingyi Xie",
+      "description": "Master by Research student",
+      "imgSrc": "/people/jingyi-xie.png"
+    },
+    {
+      "name": "Ken Tan",
+      "description": "Master By Research student",
+      "imgSrc": "/people/ken-tan.png"
     }
   ]
 }

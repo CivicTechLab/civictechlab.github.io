@@ -33,6 +33,7 @@ const People: Collection = {
           type: 'image',
           label: 'Image',
           name: 'imgSrc',
+          required: true,
         },
         {
           type: 'string',
@@ -42,7 +43,7 @@ const People: Collection = {
             validate(value) {
               const expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
               const regex = new RegExp(expression);
-              if (!value.match(regex)) {
+              if (value && !value.match(regex)) {
                 return "Invalid website. Website should begin with either http or https."
               }
             },

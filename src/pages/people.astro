@@ -21,9 +21,13 @@ const alumnus = alumniEntry.data.people;
   <body>
     <main class="container">
       <h1 class="text-center">Current Team</h1>
-      {currentPeople.map((person) => <PersonCard person={person} />)}
-      <h2 class="h1 text-center">Alumni</h2>
-      {alumnus.map((person) => <PersonCard person={person} />)}
+      <div class="row">
+        {currentPeople.map((person) => <PersonCard person={person} />)}
+      </div>
+      <h2 class="h1 text-center mt-4">Alumni</h2>
+      <div class="row">
+        {alumnus.map((person) => <PersonCard person={person} />)}
+      </div>
     </main>
     <Footer />
   </body>
