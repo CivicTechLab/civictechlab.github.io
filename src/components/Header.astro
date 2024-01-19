@@ -1,5 +1,6 @@
 ---
 import Logo from '../assets/logo.png';
+import HeaderLink from './HeaderLink.astro';
 ---
 
 <nav class="navbar sticky-top border-bottom navbar-expand-lg bg-body-tertiary">
@@ -22,24 +23,26 @@ import Logo from '../assets/logo.png';
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <HeaderLink class="nav-link" href="/">Home</HeaderLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="people">People</a>
+            <HeaderLink class="nav-link" href="/people">People</HeaderLink>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Projects
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Civic Tech</a></li>
+              <li>
+                <HeaderLink class="dropdown-item" href="#">Civic Tech</HeaderLink>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="news">News</a>
+            <HeaderLink class="nav-link" href="/news">News</HeaderLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="join-us">Join Us</a>
+            <HeaderLink class="nav-link" href="/join-us">Join Us</HeaderLink>
           </li>
         </ul>
       </div>
