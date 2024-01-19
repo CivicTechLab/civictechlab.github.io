@@ -15,12 +15,15 @@ const blogCollection = defineCollection({
 
 const homeCollection = defineCollection({
   type: 'data',
-  schema: z.array(
-    z.object({
-      title: z.string(),
-      description: z.string(),
-    }),
-  ),
+  schema: z.object({
+    home: z.array(
+      z.object({
+        title: z.string(),
+        description: z.string(),
+        imgSrc: z.string().optional(),
+      }),
+    ),
+  }),
 });
 
 export const collections = { blog: blogCollection, home: homeCollection };

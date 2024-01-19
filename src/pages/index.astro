@@ -7,7 +7,8 @@ import { Image } from 'astro:assets';
 import Logo from '../assets/logo.gif';
 
 import { getEntry } from 'astro:content';
-const { data } = await getEntry('home', 'home');
+const entry = await getEntry('home', 'home');
+const data = entry.data.home;
 ---
 
 <!doctype html>
@@ -25,6 +26,7 @@ const { data } = await getEntry('home', 'home');
           data.map((d) => (
             <div class="col-md-6 p-2">
               <div class="card h-100 text-center">
+                {d.imgSrc && <img src={d.imgSrc} class="card-img-top object-fit-cover" />}
                 <div class="card-body">
                   <h5 class="card-title">{d.title}</h5>
                   <p class="card-text">{d.description}</p>
@@ -38,3 +40,8 @@ const { data } = await getEntry('home', 'home');
     <Footer />
   </body>
 </Layout>
+<style>
+  img.card-img-top {
+    height: 200px;
+  }
+</style>
