@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Layout from '../layouts/Layout.astro';
 
 import { getEntry } from 'astro:content';
+import PersonCard from '../components/PersonCard.astro';
 const currentEntry = await getEntry('people', 'current');
 const alumniEntry = await getEntry('people', 'alumni');
 const currentPeople = currentEntry.data.people;
@@ -20,47 +21,9 @@ const alumnus = alumniEntry.data.people;
   <body>
     <main class="container">
       <h1 class="text-center">Current Team</h1>
-      {
-        currentPeople.map((person) => (
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2">
-            <div class="card h-100">
-              <div class="card-body">
-                <h2 class="h4 text-center">{person.name}</h2>
-              </div>
-              <div class="ratio ratio-1x1">
-                <img class="card-img object-fit-cover rounded-0" src={person.imgSrc} />
-              </div>
-              <div class="card-body">
-                <p class="card-text">{person.description}</p>
-                <a href={person.website} class="btn btn-outline-primary btn-sm">
-                  Website
-                </a>
-              </div>
-            </div>
-          </div>
-        ))
-      }
+      {currentPeople.map((person) => <PersonCard person={person} />)}
       <h2 class="h1 text-center">Alumni</h2>
-      {
-        currentPeople.map((person) => (
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2">
-            <div class="card h-100">
-              <div class="card-body">
-                <h2 class="h4 text-center">{person.name}</h2>
-              </div>
-              <div class="ratio ratio-1x1">
-                <img class="card-img object-fit-cover rounded-0" src={person.imgSrc} />
-              </div>
-              <div class="card-body">
-                <p class="card-text">{person.description}</p>
-                <a href={person.website} class="btn btn-outline-primary btn-sm">
-                  Website
-                </a>
-              </div>
-            </div>
-          </div>
-        ))
-      }
+      {alumnus.map((person) => <PersonCard person={person} />)}
     </main>
     <Footer />
   </body>

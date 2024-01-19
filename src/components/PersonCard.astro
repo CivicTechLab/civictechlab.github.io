@@ -1,0 +1,25 @@
+---
+const { person } = Astro.props;
+const { name, description, imgSrc, website } = person;
+---
+
+<div class="col-lg-3 col-md-4 col-sm-6 p-2">
+  <div class="card h-100">
+    <div class="card-body">
+      <h2 class="h4 text-center">{name}</h2>
+    </div>
+    <div class="ratio ratio-1x1">
+      <img class="card-img object-fit-cover rounded-0" src={imgSrc} />
+    </div>
+    <div class="card-body">
+      <p class="card-text">{description}</p>
+      {
+        website && (
+          <a href={website} class="btn btn-outline-primary btn-sm">
+            Website
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>
