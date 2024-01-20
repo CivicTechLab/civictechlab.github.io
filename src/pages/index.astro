@@ -3,7 +3,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
 import Logo from '../assets/logo.gif';
 
 import { getEntry } from 'astro:content';
@@ -19,14 +18,14 @@ const data = entry.data.home;
   <body>
     <main class="container">
       <div class="d-flex justify-content-center pb-4">
-        <Image class="rounded mw-100" src={Logo} alt="CivicTech Lab" />
+        <img class="rounded mw-100" src={Logo.src} alt="CivicTech Lab" />
       </div>
       <div class="row">
         {
           data.map((d) => (
             <div class="col-md-6 p-2">
               <div class="card h-100 text-center">
-                {d.imgSrc && <img src={d.imgSrc} class="card-img-top" />}
+                {d.imgSrc && <img src={d.imgSrc} class="card-img-top" alt="" />}
                 <div class="card-body">
                   <h5 class="card-title">{d.title}</h5>
                   <p class="card-text">{d.description}</p>

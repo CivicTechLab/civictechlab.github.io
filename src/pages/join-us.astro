@@ -1,11 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Layout from '../layouts/Layout.astro';
 const joinus = await Astro.glob('../content/joinus/*.md');
-console.log(joinus);
 ---
 
 <!doctype html>

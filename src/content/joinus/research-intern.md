@@ -25,4 +25,4 @@ Ongoing
 
 ### Application Procedure
 
-Email <a href="mailto:civictechlabnus@gmail.com">civictechlabnus@gmail.com</a> with the position title as the subject.
+Email civictechlabnus@gmail.com with the position title as the subject.

@@ -3,17 +3,21 @@ const { person } = Astro.props;
 const { name, description, imgSrc, website } = person;
 ---
 
-<div class="col-lg-3 col-md-4 col-sm-6 p-2">
+<div class="col-lg-3 col-md-4 col-6 p-2">
   <div class="card h-100">
     <h2 class="h4 py-3 px-1 text-center">{name}</h2>
     <div class="ratio ratio-1x1 bg-grey">
-      <img class="card-img rounded-0 object-fit-scale" src={imgSrc} />
+      <img class="card-img rounded-0 object-fit-scale" src={imgSrc} alt={name} />
     </div>
     <div class="card-body">
       <p class="card-text">{description}</p>
-      <a href={website} target="_blank" class={`btn btn-outline-primary btn-sm ${!website ? 'invisible' : ''}`}>
-        {website && website.includes('linkedin.com') ? 'LinkedIn' : 'Website'}
-      </a>
+      {
+        website && (
+          <a href={website} target="_blank" class="btn btn-outline-primary btn-sm">
+            {website.includes('linkedin.com') ? 'LinkedIn' : 'Website'}
+          </a>
+        )
+      }
     </div>
   </div>
 </div>
