@@ -14,6 +14,11 @@ const joinus = await Astro.glob('../content/joinus/*.md');
   <body>
     <main class="container">
       <h1 class="text-center">Join Us</h1>
+      <p class="text-center h5">
+        We are expanding our team! Don't hesitate to join us if you find yourself a good fit for the following position{
+          joinus.length == 1 ? '' : 's'
+        }!
+      </p>
       {
         joinus.map(({ Content, frontmatter }) => (
           <div class="card">
