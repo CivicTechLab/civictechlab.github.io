@@ -3,128 +3,128 @@
     {
       "name": "Charlene Chan Mun Yee",
       "description": "Research Assistant, Undergrad Student, NUS Data science and Analytics",
-      "imgSrc": "/people/charlene.png",
+      "imgSrc": "/src/assets/people/charlene.png",
       "website": "https://www.linkedin.com/in/charlene-chan-00/"
     },
     {
       "name": "Tan Si Min, Odele",
       "description": "Research Assistant, Undergrad Student, Urban Studies",
-      "imgSrc": "/people/odele-tan.png",
+      "imgSrc": "/src/assets/people/odele-tan.png",
       "website": "https://readymag.com/odele/portfolio/"
     },
     {
       "name": "Wenli Hu",
       "description": "Research Intern, Master graduate, Hong Kong Baptist University",
-      "imgSrc": "/people/wenli-hu.png"
+      "imgSrc": "/src/assets/people/wenli-hu.png"
     },
     {
       "name": "Dong Wang",
       "description": "Visiting PhD Student, University of Science and Technology of China",
-      "imgSrc": "/people/dong-wang.png"
+      "imgSrc": "/src/assets/people/dong-wang.png"
     },
     {
       "name": "Jason, Chin Seang Ng",
       "description": "Research Assistant, undergrad student, Mathematics, NUS",
-      "imgSrc": "/people/jason-chin.png"
+      "imgSrc": "/src/assets/people/jason-chin.png"
     },
     {
       "name": "Haodong Liu",
       "description": "Research Intern, Master graduate, City University of Hong Kong",
-      "imgSrc": "/people/haodong-liu.png"
+      "imgSrc": "/src/assets/people/haodong-liu.png"
     },
     {
       "name": "Huazhi Qin",
       "description": "Research Intern, Master graduate, Georgetown University",
-      "imgSrc": "/people/huazhi-qin.png"
+      "imgSrc": "/src/assets/people/huazhi-qin.png"
     },
     {
       "name": "Tong Tong",
       "description": "Visiting PhD Student, Tsinghua University",
-      "imgSrc": "/people/tong-tong.png"
+      "imgSrc": "/src/assets/people/tong-tong.png"
     },
     {
       "name": "Zhuo Chen",
       "description": "PhD Graduate, 2022; Assistant Professor, HSBC Business School, Peking University",
-      "imgSrc": "/people/zhuo-chen.png"
+      "imgSrc": "/src/assets/people/zhuo-chen.png"
     },
     {
       "name": "Yipeng Xi",
       "description": "PhD Graduate 2022; Assistant Professor, Shanghai Jiaotong University",
-      "imgSrc": "/people/yipeng-xi.png"
+      "imgSrc": "/src/assets/people/yipeng-xi.png"
     },
     {
       "name": "Manjiang He",
       "description": "Research Assistant, Master student, LKYSPP, NUS",
-      "imgSrc": "/people/manjiang-he.png",
+      "imgSrc": "/src/assets/people/manjiang-he.png",
       "website": "https://www.linkedin.com/in/manjianghe/"
     },
     {
       "name": "Nuriyah Fatin",
       "description": "Research Assistant 2021-2022, undergrad student, CNM, NUS",
-      "imgSrc": "/people/nuriyah-fatin.png",
+      "imgSrc": "/src/assets/people/nuriyah-fatin.png",
       "website": "https://nuriyahfatin.wixsite.com/website"
     },
     {
       "name": "Dr. Anfan Chen",
       "description": "Visiting PhD Student, Tsinghua University, 2019; currently PostDoc Researcher at Chinese University of Hong Kong (CUHK)",
-      "imgSrc": "/people/anfan-chen.png",
+      "imgSrc": "/src/assets/people/anfan-chen.png",
       "website": "https://www.researchgate.net/profile/Anfan-Chen"
     },
     {
       "name": "Ximing Liu",
       "description": "Master Graduate, 2019; currently Market Researcher at Tencent",
-      "imgSrc": "/people/ximing-liu.png",
+      "imgSrc": "/src/assets/people/ximing-liu.png",
       "website": "https://www.linkedin.com/in/ximing-liu-951543b8/?originalSubdomain=cn"
     },
     {
       "name": "Dr. Sanju Menon",
       "description": "PhD Graduate, 2018; currently Data Scientist (Cognitive Automation) at UBS",
-      "imgSrc": "/people/sanju-menon.png",
+      "imgSrc": "/src/assets/people/sanju-menon.png",
       "website": "https://www.linkedin.com/in/sanjumenonp/"
     },
     {
       "name": "Jingjing Liang",
       "description": "Master Graduate, 2018; currently at Tencent",
-      "imgSrc": "/people/jingjing-liang.png"
+      "imgSrc": "/src/assets/people/jingjing-liang.png"
     },
     {
       "name": "Tian Yang",
       "description": "Master Graduate, 2017; currently doctoral candidate at University of Pennsylvania",
-      "imgSrc": "/people/tian-yang.png",
+      "imgSrc": "/src/assets/people/tian-yang.png",
       "website": "https://www.asc.upenn.edu/people/graduate-student/tian-yang"
     },
     {
       "name": "Dr. Gulizar Haciyakupoglu ",
       "description": "PhD Graduate, 2016; currently Research Fellow at Nanyang Technological University",
-      "imgSrc": "/people/gulizar.png",
+      "imgSrc": "/src/assets/people/gulizar.png",
       "website": "https://www.rsis.edu.sg/profile/gulizar-haciyakupoglu/"
     },
     {
       "name": "Lize Zhang",
       "description": "Master Graduate, 2016; currently Founder of Peach Says ",
-      "imgSrc": "/people/lize-zhang.png"
+      "imgSrc": "/src/assets/people/lize-zhang.png"
     },
     {
       "name": "Dr. Simon Perrault",
       "description": "Postdoc Researcher, 2014-2015; currently Assistant Professor, Singapore University of Science and Technology",
-      "imgSrc": "/people/simon-perrault.png",
+      "imgSrc": "/src/assets/people/simon-perrault.png",
       "website": "https://istd.sutd.edu.sg/people/faculty/simon-perrault#biography"
     },
     {
       "name": "Jodie Luu",
       "description": "Master Graduate, 2013; currently Lecturer at National University of Singapore",
-      "imgSrc": "/people/jodie-luu.png",
+      "imgSrc": "/src/assets/people/jodie-luu.png",
       "website": "https://www.nus.edu.sg/celc/staff/jodieluu.html"
     },
     {
       "name": "Catherine Candano",
       "description": "Master Graduate, 2012; currently Head, Strategic Data Partnerships Development, Google Asia Pacific",
-      "imgSrc": "/people/catherine-candano.png"
+      "imgSrc": "/src/assets/people/catherine-candano.png"
     },
     {
       "name": "Lingzi Zhang",
       "description": "Master Graduate, 2012; currently Product Director at Ola Chat",
-      "imgSrc": "/people/lingzi-zhang.png",
+      "imgSrc": "/src/assets/people/lingzi-zhang.png",
       "website": "https://www.linkedin.com/in/lizziezhang/"
     }
   ]

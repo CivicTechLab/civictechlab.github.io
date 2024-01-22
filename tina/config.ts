@@ -8,10 +8,7 @@ const branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF ||
 
 export default defineConfig({
   branch,
-
-  // Get this from tina.io
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
+  clientId: process.env.TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
 
   build: {
@@ -20,8 +17,8 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: '',
-      publicFolder: 'public',
+      mediaRoot: '/src/assets',
+      publicFolder: '',
     },
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/

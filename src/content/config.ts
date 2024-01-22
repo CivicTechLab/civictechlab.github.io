@@ -33,29 +33,31 @@ const projectsCollection = defineCollection({
 
 const homeCollection = defineCollection({
   type: 'data',
-  schema: z.object({
-    home: z.array(
-      z.object({
-        title: z.string(),
-        description: z.string(),
-        imgSrc: z.string().optional(),
-      }),
-    ),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      home: z.array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+          imgSrc: image().optional(),
+        }),
+      ),
+    }),
 });
 
 const peopleCollection = defineCollection({
   type: 'data',
-  schema: z.object({
-    people: z.array(
-      z.object({
-        name: z.string(),
-        description: z.string(),
-        imgSrc: z.string().optional(),
-        website: z.string().url().optional(),
-      }),
-    ),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      people: z.array(
+        z.object({
+          name: z.string(),
+          description: z.string(),
+          imgSrc: image().optional(),
+          website: z.string().url().optional(),
+        }),
+      ),
+    }),
 });
 
 const joinUsCollection = defineCollection({
