@@ -6,6 +6,7 @@
     "dev": "tinacms dev -c \"astro dev\"",
     "start": "tinacms dev -c \"astro dev\"",
     "build": "tinacms build && astro check && astro build",
+    "prebuild": "node replaceAssetPaths.js",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint --ext .js,.astro src",
