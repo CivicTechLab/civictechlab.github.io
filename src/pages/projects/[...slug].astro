@@ -1,0 +1,26 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import BaseHead from '../../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: project,
+  }));
+}
+type Props = CollectionEntry<'projects'>;
+
+const project = Astro.props;
+---
+
+<Layout>
+  <head>
+    <BaseHead title={`${project.data.title} | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main class="container">Lorem Ipsum</main>
+  </body>
+</Layout>

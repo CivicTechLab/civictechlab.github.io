@@ -11,6 +11,26 @@ const blogCollection = defineCollection({
   }),
 });
 
+const projectsCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    heroImage: z.string().optional(),
+    content: z.string(),
+    sections: z.array(
+      z.object({
+        title: z.string().optional(),
+        content: z.string().optional(),
+        name: z.string().optional(),
+        imgSrc: z.string().optional(),
+        link: z.string().url().optional(),
+        _template: z.string(),
+      }),
+    ),
+  }),
+});
+
 const homeCollection = defineCollection({
   type: 'data',
   schema: z.object({
@@ -49,6 +69,7 @@ const joinUsCollection = defineCollection({
 export const collections = {
   blog: blogCollection,
   home: homeCollection,
+  projects: projectsCollection,
   people: peopleCollection,
   joinus: joinUsCollection,
 };

@@ -1,0 +1,13 @@
+{
+  "title": "Hello",
+  "heroImgSrc": "/blog-placeholder-1.jpg",
+  "description": "Test",
+  "content": "Content\n",
+  "sections": [
+    {
+      "title": "Hello",
+      "content": "123\n",
+      "_template": "content"
+    }
+  ]
+}
