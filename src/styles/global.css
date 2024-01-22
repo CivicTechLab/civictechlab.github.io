@@ -18,3 +18,13 @@
 main {
   padding: 2em 1em;
 }
+
+.prose p:has(img) {
+  text-align: center;
+}
+
+.prose p > img {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}

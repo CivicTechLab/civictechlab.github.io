@@ -1,6 +1,14 @@
 ---
+import { getCollection } from 'astro:content';
 import Logo from '../assets/logo.png';
 import HeaderLink from './HeaderLink.astro';
+const projects = await getCollection('projects');
+const projectList = projects.map((project) => {
+  return {
+    slug: project.id.toLowerCase(),
+    title: project.data.title,
+  };
+});
 ---
 
 <nav class="navbar sticky-top border-bottom navbar-expand-lg bg-body-tertiary">
@@ -32,9 +40,15 @@ import HeaderLink from './HeaderLink.astro';
             Projects
           </a>
           <ul class="dropdown-menu">
-            <li>
-              <HeaderLink class="dropdown-item" href="#">Civic Tech</HeaderLink>
-            </li>
+            {
+              projectList.map((p) => (
+                <li>
+                  <HeaderLink class="dropdown-item" href={`/projects/${p.slug}`}>
+                    {p.title}
+                  </HeaderLink>
+                </li>
+              ))
+            }
           </ul>
         </li>
         <li class="nav-item">
