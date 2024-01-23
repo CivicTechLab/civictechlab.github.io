@@ -3,22 +3,22 @@
     {
       "title": "OUR VISION",
       "description": "An interdisciplinary, cross-sectoral and collaborative approach to tackling civic challenges.",
-      "imgSrc": "/src/assets/home/vision.jpeg"
+      "imgSrc": "/home/vision.jpeg"
     },
     {
       "title": "OUR MISSION",
       "description": "Generate the highest quality research about Civic Technology. Strengthen the civic core of public-sector, private-sector actors and citizens. Design critically processes and technologies for the public good.",
-      "imgSrc": "/src/assets/home/mission.jpeg"
+      "imgSrc": "/home/mission.jpeg"
     },
     {
       "title": "OUR TEAM",
       "description": "CivicTech Lab at National University of Singapore is a research hub led by Dr. Weiyu Zhang. We are a team of social scientists, computer scientists, and digital cultural analysts.",
-      "imgSrc": "/src/assets/home/team.jpeg"
+      "imgSrc": "/home/team.jpeg"
     },
     {
       "title": "OUR HISTORY",
       "description": "The CivicTech Lab (formerly the Media Psychology Lab) was established in 2008 by Dr. Weiyu Zhang, as a central location for research projects on civic engagement and information communication technology conducted by the team.",
-      "imgSrc": "/src/assets/home/history.jpeg"
+      "imgSrc": "/home/history.jpeg"
     }
   ]
 }

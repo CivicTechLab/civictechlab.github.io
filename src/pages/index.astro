@@ -6,7 +6,6 @@ import Layout from '../layouts/Layout.astro';
 import Logo from '../assets/logo.gif';
 
 import { getEntry } from 'astro:content';
-import { Image } from 'astro:assets';
 const entry = await getEntry('home', 'home');
 const data = entry.data.home;
 ---
@@ -26,7 +25,7 @@ const data = entry.data.home;
           data.map((d) => (
             <div class="col-md-6 py-2">
               <div class="card h-100 text-center">
-                {d.imgSrc && <Image src={d.imgSrc} class="card-img-top" alt="" />}
+                {d.imgSrc && <img src={d.imgSrc} class="card-img-top" alt="" />}
                 <div class="card-body">
                   <h5 class="card-title">{d.title}</h5>
                   <p class="card-text">{d.description}</p>

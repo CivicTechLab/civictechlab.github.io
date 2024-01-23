@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-
 const { person } = Astro.props;
 const { name, description, imgSrc, website } = person;
 ---
@@ -9,7 +7,7 @@ const { name, description, imgSrc, website } = person;
   <div class="card h-100">
     <h2 class="h4 py-3 px-1 text-center">{name}</h2>
     <div class="ratio ratio-1x1 bg-grey">
-      <Image class="card-img rounded-0 object-fit-scale" src={imgSrc} alt={name} />
+      <img class="card-img rounded-0 object-fit-scale" src={imgSrc} alt={name} />
     </div>
     <div class="card-body">
       <p class="card-text">{description}</p>
