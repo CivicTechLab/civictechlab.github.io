@@ -5,7 +5,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import client from '../../../tina/__generated__/client';
 import Footer from '../../components/Footer.astro';
-import ProjectContent from '../../components/ProjectContent';
+import ProjectContent from '../../components/react/ProjectContent';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
