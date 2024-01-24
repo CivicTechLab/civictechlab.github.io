@@ -4,7 +4,8 @@ import Layout from '../../layouts/Layout.astro';
 import BaseHead from '../../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import client from '../../../tina/__generated__/client';
-import { TinaMarkdown } from 'tinacms/dist/rich-text';
+import Footer from '../../components/Footer.astro';
+import ProjectContent from '../../components/ProjectContent';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -16,7 +17,7 @@ export async function getStaticPaths() {
 }
 type Props = CollectionEntry<'projects'>;
 const project = Astro.props;
-const { data } = await client.queries.projects({ relativePath: `${project.id}.json` });
+const response = await client.queries.projects({ relativePath: `${project.id}.json` });
 ---
 
 <Layout>
@@ -25,8 +26,8 @@ const { data } = await client.queries.projects({ relativePath: `${project.id}.js
   </head>
   <body>
     <main class="container prose">
-      <h1>Projects: {project.data.title}</h1>
-      <TinaMarkdown content={data.projects.content} />
+      <ProjectContent client:load {...response} />
     </main>
+    <Footer />
   </body>
 </Layout>
