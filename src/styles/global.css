@@ -29,3 +29,20 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+
+footer {
+  padding: 2em 1em;
+  background: linear-gradient(var(--gray-gradient)) no-repeat;
+  color: rgb(var(--gray));
+}
+
+a.nav-link {
+  padding-left: 0;
+}
+
+@media screen and (max-width: 568px) {
+  .row > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

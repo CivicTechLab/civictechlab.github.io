@@ -60,6 +60,38 @@ const peopleCollection = defineCollection({
   }),
 });
 
+const globalCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    header: z.object({
+      nav: z.array(
+        z.object({
+          label: z.string(),
+        }),
+      ),
+    }),
+    footer: z.object({
+      first: z.object({
+        title: z.string(),
+        description: z.string(),
+      }),
+      second: z.object({
+        title: z.string(),
+        description: z.string(),
+      }),
+      third: z.object({
+        title: z.string(),
+        links: z.array(
+          z.object({
+            label: z.string(),
+            href: z.string(),
+          }),
+        ),
+      }),
+    }),
+  }),
+});
+
 const joinUsCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -74,4 +106,5 @@ export const collections = {
   projects: projectsCollection,
   people: peopleCollection,
   joinus: joinUsCollection,
+  global: globalCollection,
 };

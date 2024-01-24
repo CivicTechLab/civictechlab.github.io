@@ -1,0 +1,50 @@
+{
+  "header": {
+    "nav": [
+      {
+        "label": "Home"
+      },
+      {
+        "label": "About"
+      },
+      {
+        "label": "Blog"
+      }
+    ]
+  },
+  "footer": {
+    "first": {
+      "title": "CivicTech Lab",
+      "description": "CivicTech Lab at National University of Singapore is a research hub led by Dr. Weiyu Zhang. We are a team of social scientists, computer scientists, and digital cultural analysts.\n"
+    },
+    "second": {
+      "title": "Find Us",
+      "description": "11 Computing Drive, Room 03-24. National University of Singapore, Singapore, 117416\n\nEmail: [civictechlabnus@gmail.com](mailto:civictechlabnus@gmail.com)\n"
+    },
+    "third": {
+      "title": "Quick Links",
+      "links": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "People",
+          "href": "/people"
+        },
+        {
+          "label": "Projects",
+          "href": "/projects"
+        },
+        {
+          "label": "News",
+          "href": "/news"
+        },
+        {
+          "label": "Join Us",
+          "href": "/join-us"
+        }
+      ]
+    }
+  }
+}

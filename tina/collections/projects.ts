@@ -1,5 +1,4 @@
-import type { Collection, Form, TinaCMS } from 'tinacms';
-import React from 'react';
+import type { Collection } from 'tinacms';
 
 const Projects: Collection = {
   name: 'projects',
