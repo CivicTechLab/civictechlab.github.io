@@ -1,8 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import BaseHead from '../../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import client from '../../../tina/__generated__/client';
 import Footer from '../../components/Footer.astro';
 import ProjectContent from '../../components/react/ProjectContent';
@@ -20,10 +18,7 @@ const project = Astro.props;
 const response = await client.queries.projects({ relativePath: `${project.id}.json` });
 ---
 
-<Layout>
-  <head>
-    <BaseHead title={`${project.data.title} | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
-  </head>
+<Layout title={project.data.title}>
   <body>
     <main class="container prose">
       <ProjectContent client:tina {...response} />

@@ -1,12 +1,17 @@
 ---
 import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js?url';
 import Header from '../components/Header.astro';
-import { SITE_TITLE } from '../consts';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from '../components/BaseHead.astro';
+
+const { title, description = SITE_DESCRIPTION } = Astro.props;
 ---
 
 <html lang="en">
+  <head>
+    <BaseHead title={`${title} | ${SITE_TITLE}`} description={description} />
+  </head>
   <Header title={SITE_TITLE} />
   <slot />
   <script is:inline src={bootstrap}></script>
-
 </html>

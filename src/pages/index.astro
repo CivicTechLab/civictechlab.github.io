@@ -1,7 +1,5 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Layout from '../layouts/Layout.astro';
 import Logo from '../assets/logo.gif';
 
@@ -11,10 +9,7 @@ const data = entry.data.home;
 ---
 
 <!doctype html>
-<Layout>
-  <head>
-    <BaseHead title={`Home | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
-  </head>
+<Layout title="Home">
   <body>
     <main class="container">
       <div class="d-flex justify-content-center pb-4">

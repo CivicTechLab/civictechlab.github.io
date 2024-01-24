@@ -1,15 +1,10 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <!doctype html>
-<Layout>
-  <head>
-    <BaseHead title={`404 Not Found | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
-  </head>
+<Layout title="404 Not Found">
   <body>
     <main class="container">
       <h1 class="text-center">Page Not Found</h1>
