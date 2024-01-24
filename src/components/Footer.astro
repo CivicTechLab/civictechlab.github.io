@@ -5,7 +5,7 @@ const response = await client.queries.global({ relativePath: 'global.json' });
 ---
 
 <footer>
-  <FooterContent client:load {...response} />
+  <FooterContent client:tina {...response} />
   <hr />
   <div class="row">
     <p class="text-center">&copy; {new Date().getFullYear()} civictechlab.org. All Rights Reserved.</p>
