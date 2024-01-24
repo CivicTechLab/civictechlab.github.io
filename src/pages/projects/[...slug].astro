@@ -26,7 +26,7 @@ const response = await client.queries.projects({ relativePath: `${project.id}.js
   </head>
   <body>
     <main class="container prose">
-      <ProjectContent client:load {...response} />
+      <ProjectContent client:tina {...response} />
     </main>
     <Footer />
   </body>
