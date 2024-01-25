@@ -3,6 +3,7 @@ import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js?url';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import BaseHead from '../components/BaseHead.astro';
+import BackToTop from '../components/BackToTop.astro';
 
 const { title, description = SITE_DESCRIPTION } = Astro.props;
 ---
@@ -12,6 +13,7 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
     <BaseHead title={`${title} | ${SITE_TITLE}`} description={description} />
   </head>
   <Header title={SITE_TITLE} />
+  <BackToTop />
   <slot />
   <script is:inline src={bootstrap}></script>
 </html>
