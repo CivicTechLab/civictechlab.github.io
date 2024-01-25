@@ -35,6 +35,30 @@ const Projects: Collection = {
       type: 'rich-text',
       label: 'Main Content',
       name: 'content',
+      description: "To insert a video, select 'Video' from the 'Embed' dropdown.",
+      parser: {
+        type: 'mdx',
+      },
+      templates: [
+        {
+          name: 'Video',
+          label: 'Video',
+          ui: {
+            itemProps: (item) => {
+              return { label: item?.src };
+            },
+          },
+          fields: [
+            {
+              name: 'src',
+              label: 'Source',
+              description:
+                'Enter a YouTube embedded link e.g. https://www.youtube.com/embed/dQw4w9WgXcQ?si=8HOpMTZzMyY_3Op7 or the filename of a video stored in the videos folder e.g. video.mp4.',
+              type: 'string',
+            },
+          ],
+        },
+      ],
     },
     {
       type: 'object',
@@ -60,6 +84,74 @@ const Projects: Collection = {
               type: 'rich-text',
               label: 'Section Content',
               name: 'content',
+              parser: {
+                type: 'mdx',
+              },
+              templates: [
+                {
+                  name: 'Video',
+                  label: 'Video',
+                  fields: [
+                    {
+                      name: 'src',
+                      label: 'Source',
+                      description:
+                        'Enter a YouTube embedded link e.g. https://www.youtube.com/embed/dQw4w9WgXcQ?si=8HOpMTZzMyY_3Op7 or the filename of a video stored in the videos folder e.g. video.mp4.',
+                      type: 'string',
+                      ui: {
+                        validate: (value) => {
+                          if (!value) {
+                            return;
+                          }
+
+                          if (value.includes('youtube.com')) {
+                            if (!value.startsWith('https://www.youtube.com/embed/')) {
+                              return 'YouTube link should begin with https://www.youtube.com/embed/.';
+                            }
+                          } else {
+                            if (!value.endsWith('.mp4') && !value.endsWith('.mov')) {
+                              return 'The video filename should end with .mp4 or .mov and be stored in the videos folder.';
+                            }
+                          }
+                        },
+                      },
+                    },
+                  ],
+                },
+                {
+                  name: 'ButtonWithText',
+                  label: 'Button with Text',
+                  fields: [
+                    {
+                      type: 'string',
+                      label: 'Text',
+                      name: 'text',
+                    },
+                    {
+                      type: 'string',
+                      label: 'Button Text',
+                      name: 'btnTxt',
+                    },
+                    {
+                      type: 'string',
+                      label: 'Button Link',
+                      description: 'Insert an external link, or the filename of a pdf file stored in reports.',
+                      name: 'link',
+                      ui: {
+                        validate: (value) => {
+                          if (!value) {
+                            return;
+                          }
+
+                          if (!value.includes('http') && !value.endsWith('.pdf')) {
+                            return 'Invalid file. Filename should include .pdf, and be stored in the reports folder.';
+                          }
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },
@@ -77,7 +169,7 @@ const Projects: Collection = {
           fields: [
             {
               type: 'string',
-              label: 'Title',
+              label: 'Section Title',
               name: 'title',
             },
             {

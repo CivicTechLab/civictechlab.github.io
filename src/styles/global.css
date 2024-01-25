@@ -21,6 +21,7 @@ main {
 
 .prose {
   line-height: 1.625rem;
+  word-break: break-word;
 }
 
 .prose p:has(img) {
