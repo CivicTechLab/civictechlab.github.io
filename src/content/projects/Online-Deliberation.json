@@ -5,11 +5,6 @@
   "content": "Are you concerned about the rising living cost in Singapore? The over-crowded MRT trains? The difficulty to find jobs due to competitions from foreign talents? Or the dilution of the Singapore identity and culture? If yes, you are not alone. Many Singaporeans share the same worries as you do. You may have sensed that during your casual conversations with your family members, your friends and colleagues, or random encounters on the Internet. But your everyday social circle is limited and it may not allow you to fully know what is going on in your fellow citizens’ minds. Do you want to know how other Singaporeans think about these problems and whether they agree with you? Do you like to talk to these fellow Singaporeans directly and discover why they hold different views from what you do? And eventually after knowing what others think, do you wish to have a voice in shaping governmental policies regarding these issues? Our research project is set to fulfill these possibilities, through building a digital platform that will be open to a group of Singaporeans who come from all walks of lives and allow them to discuss these issues with each other.\n\n![](/online-deliberation/hero.png)\n",
   "sections": [
     {
-      "title": "Tools",
-      "content": "<ButtonWithText text=\"Platform Demo\" btnTxt=\"\" />\n\n<Video src=\"Tutorial Video.mp4\" />\n\n<ButtonWithText text=\"Graph Editor Guide\" btnTxt=\"Download\" link=\"Graph Editor Guide.pdf\" />\n\n![](/online-deliberation/graph-editor.png)\n\n<ButtonWithText text=\"Policy Maker Interface Demo\" btnTxt=\"Download\" link=\"Policy Makers Guide.pdf\" />\n\n![](/online-deliberation/policy-maker.png)\n\n<ButtonWithText text=\"Sentiment Analysis Demo\" btnTxt=\"Download\" link=\"Demographic on Sentiment.pdf\" />\n\n![](/online-deliberation/sentiment-analysis.png)\n",
-      "_template": "content"
-    },
-    {
       "title": "How It Worked",
       "content": "![](/online-deliberation/how.png)\n",
       "_template": "content"
@@ -25,6 +20,11 @@
       "_template": "content"
     },
     {
+      "title": "Tools",
+      "content": "<ButtonWithText text=\"Platform Demo\" btnTxt=\"\" />\n\n<Video src=\"Tutorial Video.mp4\" />\n\n<ButtonWithText text=\"Graph Editor Guide\" btnTxt=\"Download\" link=\"Graph Editor Guide.pdf\" />\n\n![](/online-deliberation/graph-editor.png)\n\n<ButtonWithText text=\"Policy Maker Interface Demo\" btnTxt=\"Download\" link=\"Policy Makers Guide.pdf\" />\n\n![](/online-deliberation/policy-maker.png)\n\n<ButtonWithText text=\"Sentiment Analysis Demo\" btnTxt=\"Download\" link=\"Demographic on Sentiment.pdf\" />\n\n![](/online-deliberation/sentiment-analysis.png)\n",
+      "_template": "content"
+    },
+    {
       "title": "Partner Institutions",
       "content": "",
       "logos": [
@@ -37,6 +37,16 @@
           "name": "MOE",
           "imgSrc": "/online-deliberation/moe.jpeg",
           "link": "https://www.moe.gov.sg/"
+        },
+        {
+          "name": "National Population and Talent Division",
+          "imgSrc": "/online-deliberation/nptd.png",
+          "link": "https://www.population.gov.sg/"
+        },
+        {
+          "name": "Institute of Policy Studies",
+          "imgSrc": "/online-deliberation/ips.png",
+          "link": "https://lkyspp.nus.edu.sg/ips"
         }
       ],
       "_template": "partnerInstitutions"

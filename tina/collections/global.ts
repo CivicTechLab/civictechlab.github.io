@@ -107,7 +107,7 @@ const Global: Collection = {
                   ui: {
                     validate: (value, data) => {
                       const labelCount = data.footer.third.links
-                        .map((link: { label: string }) => link.label.trim())
+                        .map((link: { label: string }) => link.label && link.label.trim())
                         .filter((name: string) => name === value.trim()).length;
 
                       if (labelCount > 1) {
