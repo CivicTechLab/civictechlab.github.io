@@ -1,5 +1,5 @@
 {
-  "title": "Cultural Science",
+  "title": "Citizen Science",
   "heroImgSrc": "/citizen-science/hero.png",
   "description": "This research program focuses on enabling public participation in science and technology topics.",
   "content": "Science and Technology topics (e.g., pandemics, climate change, gene editing, artificial intelligence) have increasingly becoming the focus of public discussion. Public understanding of science and technology is the foundation of the governance of these history-changing actants. Without the publics’ buy-in, we cannot harvest the fruits of scientific breakthroughs (e.g., vaccine take-up). Without the public’s support, we won’t be able to reverse the climate change human development has induced. Without the public’s debate, we won’t know that there are limits the mankind must set to their own imagination (e.g., gene editing). Without the public’s thought evolvement, we cannot justify the decisions on technological development made by experts (e.g., artificial intelligence).\n",
@@ -14,8 +14,8 @@
       "content": "This research was funded by Singapore Food Agency through the collaboration with Department of Chemistry, NUS (A-8001371-00-00). Any opinions, findings and conclusions or recommendations expressed on this website are those of the authors and do not necessarily reflect the views of the funder.\n",
       "logos": [
         {
-          "name": "Universities For Climate Alliance",
-          "imgSrc": "/citizen-science/iuc.png",
+          "name": "IUCA",
+          "imgSrc": "/citizen-science/iuca.png",
           "link": "https://universitiesforclimate.org/"
         },
         {
