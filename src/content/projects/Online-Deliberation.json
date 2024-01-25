@@ -1,6 +1,7 @@
 {
   "title": "Online Deliberation",
   "heroImgSrc": "",
+  "caption": "",
   "description": "",
   "content": "Are you concerned about the rising living cost in Singapore? The over-crowded MRT trains? The difficulty to find jobs due to competitions from foreign talents? Or the dilution of the Singapore identity and culture? If yes, you are not alone. Many Singaporeans share the same worries as you do. You may have sensed that during your casual conversations with your family members, your friends and colleagues, or random encounters on the Internet. But your everyday social circle is limited and it may not allow you to fully know what is going on in your fellow citizens’ minds. Do you want to know how other Singaporeans think about these problems and whether they agree with you? Do you like to talk to these fellow Singaporeans directly and discover why they hold different views from what you do? And eventually after knowing what others think, do you wish to have a voice in shaping governmental policies regarding these issues? Our research project is set to fulfill these possibilities, through building a digital platform that will be open to a group of Singaporeans who come from all walks of lives and allow them to discuss these issues with each other.\n\n![](/online-deliberation/hero.png)\n",
   "sections": [
@@ -11,7 +12,7 @@
     },
     {
       "title": "What The Experience Was Like",
-      "content": "Now you probably wonder how the digital platform actually “looks and feels” should you be able to have the chance to participate. We had a few technological features built into the digital platform that you may find interesting.\n\n![](/online-deliberation/experience.png)\n\n[See more details in this Report on Preliminary Findings.](https://civictechlab.org/reports/Report-on-Preliminary-Findings.pdf)\n",
+      "content": "Now you probably wonder how the digital platform actually “looks and feels” should you be able to have the chance to participate. We had a few technological features built into the digital platform that you may find interesting.\n\n![](/online-deliberation/experience.png)\n\n[See more details in this Report on Preliminary Findings.](/reports/Report-on-Preliminary-Findings.pdf)\n",
       "_template": "content"
     },
     {

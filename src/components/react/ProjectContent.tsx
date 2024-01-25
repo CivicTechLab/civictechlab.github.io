@@ -38,7 +38,9 @@ const components = {
       );
     }
 
-    return <video className="mx-auto d-block" src={`/videos/${src}`} style={{ maxWidth: '700px' }} controls></video>;
+    return (
+      <video className="mx-auto d-block w-100" src={`/videos/${src}`} style={{ maxWidth: '700px' }} controls></video>
+    );
   },
 };
 
