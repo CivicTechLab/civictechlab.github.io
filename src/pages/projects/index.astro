@@ -21,7 +21,7 @@ const projects = await getCollection('projects');
                     <a href={`/projects/${project.id}`} class="link-primary">
                       <h2 class="h4">{project.data.title}</h2>
                     </a>
-                    <p class="card-text">{project.data.description}</p>
+                    {project.data.description && <p class="card-text">{project.data.description}</p>}
                   </div>
                 </div>
               </div>
