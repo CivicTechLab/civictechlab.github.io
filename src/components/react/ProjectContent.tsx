@@ -23,7 +23,7 @@ const ProjectContent = (props: { query: string; variables: object; data: any }) 
               <h2 className="mt-4 pb-1 border-bottom">{section.title}</h2>
               <TinaMarkdown content={section.content}></TinaMarkdown>
               {template === 'ProjectsSectionsPartnerInstitutions' && section.logos && (
-                <div className="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-4">
+                <div className="d-flex align-items-center justify-content-center flex-wrap row-gap-3 column-gap-5 mt-4">
                   {section.logos &&
                     section.logos.map((logo: { name: string; imgSrc: string; link: string }, index: number) => {
                       if (!logo.imgSrc) {
