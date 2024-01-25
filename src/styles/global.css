@@ -19,6 +19,14 @@ main {
   padding: 2em 1em;
 }
 
+.btn-with-text {
+  margin-top: 24px;
+}
+
+.btn-with-text:first-of-type {
+  margin-top: 0;
+}
+
 .prose {
   line-height: 1.625rem;
   word-break: break-word;

@@ -24,6 +24,11 @@ const Projects: Collection = {
       name: 'heroImgSrc',
     },
     {
+      type: 'rich-text',
+      label: 'Caption',
+      name: 'caption',
+    },
+    {
       type: 'string',
       label: 'Description',
       name: 'description',
@@ -143,8 +148,13 @@ const Projects: Collection = {
                             return;
                           }
 
-                          if (!value.includes('http') && !value.endsWith('.pdf')) {
-                            return 'Invalid file. Filename should include .pdf, and be stored in the reports folder.';
+                          if (
+                            !value.includes('http') &&
+                            !value.endsWith('.pdf') &&
+                            !value.endsWith('.doc') &&
+                            !value.endsWith('.docx')
+                          ) {
+                            return 'Invalid file. Filename should include .pdf, .doc or .docx, and be stored in the reports folder.';
                           }
                         },
                       },

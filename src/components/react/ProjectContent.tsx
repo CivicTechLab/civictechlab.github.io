@@ -4,18 +4,16 @@ import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 const components = {
   ButtonWithText: ({ text, btnTxt, link }: { text: string; btnTxt: string; link: string }) => {
-    const isLocalReport = link && link.endsWith('.pdf') && !link.startsWith('http');
+    const isLocalReport =
+      link && (link.endsWith('.pdf') || link.endsWith('.doc') || link.endsWith('.docx')) && !link.startsWith('http');
     return (
-      <div
-        className="d-flex mb-3 pt-1 mx-auto justify-content-between align-items-center mt-4"
-        style={{ maxWidth: '700px' }}
-      >
+      <div className="d-flex mb-3 pt-1 mx-auto justify-content-between align-items-center btn-with-text">
         {text && <h3 className="h4 m-0 me-3">{text}</h3>}
         {btnTxt && (
           <a
             href={isLocalReport ? `/reports/${link}` : link}
             target="_blank"
-            className="btn btn-sm btn-outline-primary"
+            className="btn btn-sm btn-outline-primary flex-shrink-0"
           >
             {btnTxt}
           </a>
@@ -46,15 +44,20 @@ const components = {
 
 const ProjectContent = (props: { query: string; variables: object; data: any }) => {
   const { data } = useTina(props);
-  const { title, description, heroImgSrc, content, sections } = data.projects;
+  const { title, description, heroImgSrc, caption, content, sections } = data.projects;
   return (
     <>
       <h1 className="text-center">Project: {title}</h1>
       {description && <p className="h5 text-center mb-4">{description}</p>}
       {heroImgSrc && (
-        <p className={`${description ? '' : 'mt-4'}`}>
-          <img src={heroImgSrc} alt="" />
-        </p>
+        <>
+          <p className={`${description ? '' : 'mt-4'}`}>
+            <img src={heroImgSrc} alt="" />
+          </p>
+          <div className="text-center text-body-tertiary" style={{ fontSize: '0.75rem', opacity: 0.7 }}>
+            <TinaMarkdown content={caption}></TinaMarkdown>
+          </div>
+        </>
       )}
       <TinaMarkdown components={components} content={content}></TinaMarkdown>
       {sections &&
