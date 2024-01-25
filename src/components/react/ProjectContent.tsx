@@ -7,31 +7,39 @@ const ProjectContent = (props: { query: string; variables: object; data: any }) 
   const { title, description, heroImgSrc, content, sections } = data.projects;
   return (
     <>
-      <h1>Projects: {title}</h1>
-      <p className="h5">{description}</p>
-      <p>
-        <img src={heroImgSrc} />
-      </p>
+      <h1 className="text-center">Project: {title}</h1>
+      <p className="h5 text-center mb-4">{description}</p>
+      {heroImgSrc && (
+        <p>
+          <img src={heroImgSrc} alt="" />
+        </p>
+      )}
       <TinaMarkdown content={content}></TinaMarkdown>
       {sections &&
         sections.map((section: any) => {
           const template = section.__typename;
           return (
             <div key={section.title}>
-              <h2>{section.title}</h2>
+              <h2 className="mt-4 pb-1 border-bottom">{section.title}</h2>
               <TinaMarkdown content={section.content}></TinaMarkdown>
               {template === 'ProjectsSectionsPartnerInstitutions' && section.logos && (
-                <div className="d-flex align-items-center justify-content-center flex-wrap gap-3">
-                  {section.logos.map((logo: { name: string; imgSrc: string; link: string }) => {
-                    if (!logo.link) {
-                      return <img style={{ maxWidth: '300px' }} key={logo.name} src={logo.imgSrc}></img>;
-                    }
-                    return (
-                      <a key={logo.name} href={logo.link} target="_blank" rel="noopener noreferrer ">
-                        <img src={logo.imgSrc} style={{ maxWidth: '300px' }} />
-                      </a>
-                    );
-                  })}
+                <div className="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-4">
+                  {section.logos &&
+                    section.logos.map((logo: { name: string; imgSrc: string; link: string }, index: number) => {
+                      if (!logo.imgSrc) {
+                        return;
+                      }
+
+                      if (!logo.link) {
+                        return <img style={{ maxWidth: '300px' }} key={logo.name || index} src={logo.imgSrc}></img>;
+                      }
+
+                      return (
+                        <a key={logo.name || index} href={logo.link} target="_blank" rel="noopener noreferrer ">
+                          <img src={logo.imgSrc} style={{ maxWidth: '300px' }} />
+                        </a>
+                      );
+                    })}
                 </div>
               )}
             </div>

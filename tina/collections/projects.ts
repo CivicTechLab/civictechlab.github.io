@@ -27,6 +27,9 @@ const Projects: Collection = {
       type: 'string',
       label: 'Description',
       name: 'description',
+      ui: {
+        component: 'textarea',
+      },
     },
     {
       type: 'rich-text',
@@ -99,6 +102,10 @@ const Projects: Collection = {
                   name: 'name',
                   ui: {
                     validate: (value, data) => {
+                      if (!value) {
+                        return;
+                      }
+
                       const nameCount = data.sections
                         .filter((section: { _template: string }) => section._template === 'partnerInstitutions')
                         .flatMap((partners: { logos: { name: string } }) => partners.logos)
@@ -115,7 +122,6 @@ const Projects: Collection = {
                   type: 'image',
                   label: 'Logo',
                   name: 'imgSrc',
-                  required: true,
                 },
                 {
                   type: 'string',

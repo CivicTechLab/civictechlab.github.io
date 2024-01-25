@@ -1,14 +1,9 @@
 {
   "title": "Civic Tech",
-  "heroImgSrc": "/blog-placeholder-1.jpg",
+  "heroImgSrc": "/civic-tech/hero.png",
   "description": "This research program aims to examine and develop Civic Tech in Asian contexts.",
-  "content": "Civic Technology, or Civic Tech, refers to information and communication technologies (ICTs) that facilitate civic engagement. Government-centric Civic Tech refers to governments utilizing the technologies for service provision, citizen consultations, and data analyses to inform policy making. Citizen-centric Civic Tech refers to the platforms and applications that enable citizens to connect and collaborate with each other and with government. Multiple groups of actors have contributed to building and implementing Civic Tech, including governments, academics, NGOs, citizen groups, and more. Yet, at least two gaps exist in the academic scrutiny of the topic:\n\n1. Although Civic Tech is gaining traction in North America and Europe, little has been known about the development in Asia, despite its increasing prominence; and\n2. As an ongoing phenomenon, our understanding is still limited regarding the sources, design, implementation, and evaluation of Civic Tech (e.g., how communities of computer programmers and digital developers play an unprecedented role in this).\n\n![](/home/history.jpeg)\n",
+  "content": "Civic Technology, or Civic Tech, refers to information and communication technologies (ICTs) that facilitate civic engagement. Government-centric Civic Tech refers to governments utilizing the technologies for service provision, citizen consultations, and data analyses to inform policy making. Citizen-centric Civic Tech refers to the platforms and applications that enable citizens to connect and collaborate with each other and with government. Multiple groups of actors have contributed to building and implementing Civic Tech, including governments, academics, NGOs, citizen groups, and more. Yet, at least two gaps exist in the academic scrutiny of the topic:\n\n1. Although Civic Tech is gaining traction in North America and Europe, little has been known about the development in Asia, despite its increasing prominence; and\n2. As an ongoing phenomenon, our understanding is still limited regarding the sources, design, implementation, and evaluation of Civic Tech (e.g., how communities of computer programmers and digital developers play an unprecedented role in this).\n",
   "sections": [
-    {
-      "title": "E",
-      "content": "",
-      "_template": "content"
-    },
     {
       "title": "Publications",
       "content": "1. Cheng, Y. & Zhang, W. (2023). C-MFD 2.0: Developing a Chinese Moral Foundation Dictionary. Computational Communication Research, 5(2). [https://doi.org/10.5117/CCR2023.2.10.CHEN](https://doi.org/10.5117/CCR2023.2.10.CHEN) \\[[GitHub](https://github.com/CivicTechLab/CMFD)] \\[video in [English](https://www.youtube.com/watch?v=fih7aodH_pM), [Chinese](https://www.youtube.com/watch?v=oQnXOyLiUwI\\&t=84s)]\n2. Zhang, W. (2022). Hybrid deliberation: Citizen dialogues in a post-pandemic era. Consultancy report for The Bertelsmann Stiftung (The Bertelsmann Foundation). Accessed at: [https://arxiv.org/submit/5018329/](https://arxiv.org/submit/5018329/)\n3. Zhang, W., Lim, G., Perrault, S., & Wang, C. (2022). A Review of Research on Civic Technology: Definitions, Theories, History and Insights. arXiv preprint arXiv:2204.11461. [\\[paper\\]](https://arxiv.org/ftp/arxiv/papers/2204/2204.11461.pdf)[\\[video\\]](https://www.youtube.com/watch?v=EwYdL3_wvwg)\n4. Zhang, W. (2022). Civic AI Education: Developing a Deliberative Framework. In 4th Annual Symposium on HCI Education (EduCHI'22), April 30-May 1, 2022, New Orleans, LA, USA. [\\[paper\\]](https://educhi2022.hcilivingcurriculum.org/wp-content/uploads/2022/04/educhi2022-final12.pdf)[\\[video\\]](https://www.youtube.com/watch?v=8dK3dUKA4sg)\n5. Zhang, W. (2021, June). [Online deliberation and #CivicTech](https://www.publicdeliberation.net/online-deliberation-and-civictech/). Deliberative Democracy Digest.\n6. Zhang, W., Lim, G., Wang, Z., & Perrault, S. (2020, October). [# CivicTech For And By Citizens: A Review And A Meta-Evaluation](https://cscwcivictechnologies.files.wordpress.com/2020/10/civictech_for_and_by_citizens.pdf). In Proceedings of Annual CSCW conference Workshop Position Papers on Civic Technologies. Virtual.\n",
@@ -19,27 +14,19 @@
       "content": "This research was funded by National University of Singapore's Collaborative Research Seed Fund (R-124-000-112-646) and NUS' Centre for Trusted Internet and Community Pilot Project Fund (R-728-117-002-290). Any opinions, findings and conclusions or recommendations expressed on this website are those of the authors and do not necessarily reflect the views of the funder.\n",
       "logos": [
         {
-          "name": "Name",
-          "imgSrc": "/blog-placeholder-2.jpg"
+          "name": "NUS CTIC",
+          "imgSrc": "/civic-tech/nus-ctic.png",
+          "link": "https://ctic.nus.edu.sg/"
         },
         {
-          "name": "Name 2",
-          "imgSrc": "/blog-placeholder-2.jpg"
+          "name": "NUS EAI",
+          "imgSrc": "/civic-tech/nus-eai.png",
+          "link": "https://research.nus.edu.sg/eai/"
         },
         {
-          "name": "Name 3",
-          "imgSrc": "/blog-placeholder-1.jpg",
-          "link": "https://www.google.com"
-        },
-        {
-          "name": "Name 4",
-          "imgSrc": "/blog-placeholder-1.jpg",
-          "link": "https://www.google.com"
-        },
-        {
-          "name": "Name 1",
-          "imgSrc": "/people/anfan-chen.png",
-          "link": "https://www.google.com"
+          "name": "SUTD",
+          "imgSrc": "/civic-tech/sutd.png",
+          "link": "https://www.sutd.edu.sg/"
         }
       ],
       "_template": "partnerInstitutions"
