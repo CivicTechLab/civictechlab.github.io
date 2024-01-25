@@ -6,7 +6,7 @@ const Footer = (props: { query: string; variables: object; data: any }) => {
   const { data } = useTina(props);
   const { first, second, third } = data.global.footer;
   return (
-    <div className="container">
+    <div className="container footer-content">
       <div className="row">
         <div className="col-md-4 pe-md-4 py-2">
           <p data-tina-field={tinaField(first, 'title')} className="h4">

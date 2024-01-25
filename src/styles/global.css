@@ -48,7 +48,7 @@ a.nav-link {
 }
 
 @media screen and (max-width: 568px) {
-  .row > * {
+  .footer-content .row > * {
     padding-left: 0;
     padding-right: 0;
   }
