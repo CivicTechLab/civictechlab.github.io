@@ -3,18 +3,17 @@ import { defineCollection, z } from 'astro:content';
 const newsCollection = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
-    description: z.string(),
+    title: z.string().optional(),
     dateFrom: z.string().optional(),
     dateTo: z.string().optional(),
-    tags: z.string().optional(),
+    tags: z.string().array().optional(),
   }),
 });
 
 const projectsCollection = defineCollection({
   type: 'data',
   schema: z.object({
-    title: z.string(),
+    title: z.string().optional(),
     description: z.string().optional(),
     heroImage: z.string().optional(),
     content: z.string().optional(),
@@ -60,8 +59,8 @@ const peopleCollection = defineCollection({
   schema: z.object({
     people: z.array(
       z.object({
-        name: z.string(),
-        description: z.string(),
+        name: z.string().optional(),
+        description: z.string().optional(),
         imgSrc: z.string().optional(),
         website: z.string().url().optional(),
       }),
