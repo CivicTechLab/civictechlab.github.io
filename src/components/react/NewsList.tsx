@@ -2,6 +2,18 @@ import React, { useEffect, useState } from 'react';
 import Global from '../../content/global/global.json';
 import NewsTag from './NewsTag';
 
+type NewsProps = {
+  body: string;
+  data: {
+    title: string;
+    tags: string[];
+    dateFrom: string;
+    dateTo: string;
+  };
+  id: string;
+  slug: string;
+};
+
 const NewsList = ({ news }: any) => {
   const tagList = Global.tags.tag;
   const [tagQuery, setTagQuery] = useState<string[]>([...tagList.map((t: { name: string }) => t.name)]);
@@ -15,7 +27,7 @@ const NewsList = ({ news }: any) => {
   }, []);
 
   const sorters = {
-    latest: (a: any, b: any) => {
+    latest: (a: NewsProps, b: NewsProps) => {
       if (!a.data.dateFrom) {
         return -1;
       }
@@ -35,7 +47,7 @@ const NewsList = ({ news }: any) => {
       return 0;
     },
 
-    earliest: (a: any, b: any) => {
+    earliest: (a: NewsProps, b: NewsProps) => {
       if (!a.data.dateFrom) {
         return 1;
       }
@@ -58,8 +70,8 @@ const NewsList = ({ news }: any) => {
 
   const [searchQuery, setSearchQuery] = useState('');
   const newsToShow = news
-    .filter((n: any) => n.data.tags.some((v: string) => tagQuery.includes(v)))
-    .filter((n: any) => n.data.title.toLowerCase().includes(searchQuery.toLowerCase()))
+    .filter((n: NewsProps) => n.data.tags.some((v: string) => tagQuery.includes(v)))
+    .filter((n: NewsProps) => n.data.title.toLowerCase().includes(searchQuery.toLowerCase()))
     .sort(sorters[sortOrder]);
 
   return (
@@ -86,7 +98,7 @@ const NewsList = ({ news }: any) => {
             </button>
             <ul className="dropdown-menu dropdown-menu-end">
               <ul className="list-group">
-                {tagList.map((tag: any) => {
+                {tagList.map((tag) => {
                   return (
                     <li className="list-group-item" style={{ border: 'none' }} key={tag.name}>
                       <input
@@ -146,7 +158,7 @@ const NewsList = ({ news }: any) => {
         )}
         {newsToShow.length === 0 && <p>No news found.</p>}
       </div>
-      {newsToShow.map((n: any) => {
+      {newsToShow.map((n: NewsProps) => {
         return (
           <div className="d-flex justify-content-center mt-2" key={n.slug}>
             <div className="card" style={{ maxWidth: '44rem', width: '100%' }}>
@@ -154,7 +166,7 @@ const NewsList = ({ news }: any) => {
                 <div className="d-flex gap-1 flex-wrap">
                   {n.data.tags &&
                     n.data.tags.map((tag: string) => {
-                      return <NewsTag tag={tag}></NewsTag>;
+                      return <NewsTag tag={tag} key={tag}></NewsTag>;
                     })}
                 </div>
                 <a
