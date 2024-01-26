@@ -18,7 +18,10 @@ const projects = await getCollection('projects');
               <div class="col-12 p-2">
                 <div class="card">
                   <div class="card-body">
-                    <a href={`/projects/${project.id.toLowerCase()}`} class="link-primary">
+                    <a
+                      href={`/projects/${project.id.toLowerCase()}`}
+                      class="link-dark link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                    >
                       <h2 class="h4">{project.data.title}</h2>
                     </a>
                     {project.data.description && <p class="card-text">{project.data.description}</p>}
@@ -34,14 +37,6 @@ const projects = await getCollection('projects');
   </body>
 </Layout>
 <style>
-  a {
-    text-decoration: none;
-  }
-
-  a:hover h2 {
-    color:;
-  }
-
   div.card-body:not(:has(p)) h2 {
     margin-bottom: 0;
   }

@@ -50,7 +50,16 @@
   "tags": {
     "tag": [
       {
-        "name": "Civic Tech"
+        "name": "Civic Tech",
+        "color": "#0066FF"
+      },
+      {
+        "name": "Presentations",
+        "color": "#190933"
+      },
+      {
+        "name": "Philippines",
+        "color": "#904E55"
       }
     ]
   }

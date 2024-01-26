@@ -98,6 +98,14 @@ const globalCollection = defineCollection({
         ),
       }),
     }),
+    tags: z.object({
+      tag: z.array(
+        z.object({
+          name: z.string().optional(),
+          color: z.string().optional(),
+        }),
+      ),
+    }),
   }),
 });
 

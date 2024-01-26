@@ -156,6 +156,14 @@ const Global: Collection = {
               name: 'name',
               label: 'Tag Name',
             },
+            {
+              type: 'string',
+              name: 'color',
+              label: 'Color',
+              ui: {
+                component: 'color',
+              },
+            },
           ],
         },
       ],
