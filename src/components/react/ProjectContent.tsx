@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTina } from 'tinacms/dist/react';
+import { tinaField, useTina } from 'tinacms/dist/react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 const components = {
@@ -48,25 +48,33 @@ const ProjectContent = (props: { query: string; variables: object; data: any }) 
   const { data } = useTina(props);
   const { title, description, heroImgSrc, caption, content, sections } = data.projects;
   return (
-    <>
-      <h1 className="text-center">Project: {title}</h1>
-      {description && <p className="h5 text-center mb-4">{description}</p>}
+    <div>
+      <h1 data-tina-field={tinaField(data.projects, 'title')} className="text-center">
+        Project: {title}
+      </h1>
+      {description && (
+        <p data-tina-field={tinaField(data.projects, 'description')} className="h5 text-center mb-4">
+          {description}
+        </p>
+      )}
       {heroImgSrc && (
         <>
           <p className={`${description ? '' : 'mt-4'}`}>
-            <img src={heroImgSrc} alt="" />
+            <img data-tina-field={tinaField(data.projects, 'heroImgSrc')} src={heroImgSrc} alt="" />
           </p>
           <div className="text-center text-body-tertiary" style={{ fontSize: '0.75rem', opacity: 0.7 }}>
             <TinaMarkdown content={caption}></TinaMarkdown>
           </div>
         </>
       )}
-      <TinaMarkdown components={components} content={content}></TinaMarkdown>
+      <div data-tina-field={tinaField(data.projects, 'content')}>
+        <TinaMarkdown components={components} content={content}></TinaMarkdown>
+      </div>
       {sections &&
         sections.map((section: any) => {
           const template = section.__typename;
           return (
-            <div key={section.title}>
+            <div key={section.title} data-tina-field={tinaField(section, 'title')}>
               <h2 className="mt-4 pb-1 border-bottom mb-3">{section.title}</h2>
               <TinaMarkdown components={components} content={section.content}></TinaMarkdown>
               {template === 'ProjectsSectionsPartnerInstitutions' && section.logos && (
@@ -103,7 +111,7 @@ const ProjectContent = (props: { query: string; variables: object; data: any }) 
             </div>
           );
         })}
-    </>
+    </div>
   );
 };
 
