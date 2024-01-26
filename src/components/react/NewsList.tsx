@@ -11,6 +11,7 @@ type NewsProps = {
     tags: string[];
     dateFrom: string;
     dateTo: string;
+    otherDates: any;
   };
   id: string;
   slug: string;
@@ -20,6 +21,8 @@ const NewsList = ({ news }: any) => {
   const tagList = Global.tags.tag;
   const $tagQuery = useStore(tagQuery);
   const [sortOrder, setSortOrder] = useState<'latest' | 'earliest'>('latest');
+  const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
+  console.log(news);
 
   const sorters = {
     latest: (a: NewsProps, b: NewsProps) => {
@@ -183,13 +186,33 @@ const NewsList = ({ news }: any) => {
                   <h5 className="card-title">{n.data.title}</h5>
                 </a>
                 <p className="card-subtitle text-body-secondary" style={{ fontSize: '0.875rem' }}>
-                  {n.data.dateFrom &&
+                  {!n.data.otherDates &&
+                    n.data.dateFrom &&
                     new Date(n.data.dateFrom).toLocaleString('en-US', { day: 'numeric', month: 'long' })}
-                  {(!n.data.dateTo ||
-                    new Date(n.data.dateTo).getFullYear() !== new Date(n.data.dateFrom).getFullYear()) &&
+                  {!n.data.otherDates &&
+                    (!n.data.dateTo ||
+                      new Date(n.data.dateTo).getFullYear() !== new Date(n.data.dateFrom).getFullYear()) &&
                     `, ${new Date(n.data.dateFrom).getFullYear()}`}
                   {n.data.dateTo &&
                     ` - ${new Date(n.data.dateTo).toLocaleString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}`}
+                  {n.data.otherDates &&
+                    formatter.format(
+                      [{ date: n.data.dateFrom }]
+                        .concat(n.data.otherDates)
+                        .map((d: { date: string }, index: number) => {
+                          if (
+                            index < n.data.otherDates.length &&
+                            new Date(n.data.otherDates[index].date).getFullYear() === new Date(d.date).getFullYear()
+                          ) {
+                            return new Date(d.date).toLocaleString('en-US', { day: 'numeric', month: 'long' });
+                          }
+                          return new Date(d.date).toLocaleString('en-US', {
+                            day: 'numeric',
+                            month: 'long',
+                            year: 'numeric',
+                          });
+                        }),
+                    )}
                 </p>
               </div>
             </div>

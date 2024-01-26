@@ -6,6 +6,13 @@ const newsCollection = defineCollection({
     title: z.string().optional(),
     dateFrom: z.string().optional(),
     dateTo: z.string().optional(),
+    otherDates: z
+      .array(
+        z.object({
+          date: z.string().optional(),
+        }),
+      )
+      .optional(),
     tags: z.string().array().optional(),
   }),
 });

@@ -62,6 +62,18 @@
   "tags": {
     "tag": [
       {
+        "name": "AI Ethics",
+        "color": "#2E2836"
+      },
+      {
+        "name": "AI Education",
+        "color": "#064789"
+      },
+      {
+        "name": "Civic Education",
+        "color": "#EBF2FA"
+      },
+      {
         "name": "Citizen Science",
         "color": "#F2E3BC"
       },
@@ -84,6 +96,10 @@
       {
         "name": "Conferences",
         "color": "#DFF3E3"
+      },
+      {
+        "name": "Community",
+        "color": "#BE8A60"
       },
       {
         "name": "Events",

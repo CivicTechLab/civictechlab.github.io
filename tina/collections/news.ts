@@ -24,7 +24,7 @@ const News: Collection = {
       type: 'string',
       label: 'Date From',
       name: 'dateFrom',
-      description: 'The event start date.',
+      description: 'At least one date must be here. Use this field for a single date or the start of a date range.',
       ui: {
         component: 'date',
       },
@@ -33,10 +33,28 @@ const News: Collection = {
       type: 'string',
       label: 'Date To',
       name: 'dateTo',
-      description: 'The event end date.',
+      description: 'Use this field for the end of the date range.',
       ui: {
         component: 'date',
       },
+    },
+    {
+      type: 'object',
+      list: true,
+      name: 'otherDates',
+      label: 'Other Dates',
+      description: 'Use this field for events on separate dates.',
+      fields: [
+        {
+          type: 'string',
+          label: 'Date',
+          name: 'date',
+          description: 'Another date the event is held on.',
+          ui: {
+            component: 'date',
+          },
+        },
+      ],
     },
     {
       type: 'string',
