@@ -31,6 +31,10 @@ const Footer = (props: { query: string; variables: object; data: any }) => {
           <nav className="nav flex-column">
             {third.links &&
               third.links.map((link: { label: string; href: string }) => {
+                if (!link.label || !link.href) {
+                  return;
+                }
+
                 return (
                   <a key={link.label} data-tina-field={tinaField(link, 'label')} className="nav-link" href={link.href}>
                     {link.label}

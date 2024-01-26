@@ -212,7 +212,7 @@ const Projects: Collection = {
                         .filter((section: { _template: string }) => section._template === 'partnerInstitutions')
                         .flatMap((partners: { logos: { name: string } }) => partners.logos)
                         .map((logo: { name: string }) => logo.name && logo.name.trim())
-                        .filter((name: string) => name === value.trim()).length;
+                        .filter((name: string) => name === (value || '').trim()).length;
 
                       if (nameCount > 1) {
                         return 'The name must be unique.';

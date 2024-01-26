@@ -103,12 +103,11 @@ const Global: Collection = {
                   type: 'string',
                   label: 'Label',
                   name: 'label',
-                  required: true,
                   ui: {
                     validate: (value, data) => {
                       const labelCount = data.footer.third.links
                         .map((link: { label: string }) => link.label && link.label.trim())
-                        .filter((name: string) => name === value.trim()).length;
+                        .filter((name: string) => name === (value || '').trim()).length;
 
                       if (labelCount > 1) {
                         return 'The label must be unique.';
@@ -122,7 +121,6 @@ const Global: Collection = {
                   description:
                     'Enter the page to link to, must begin with a slash. The home page is denoted by a single slash.',
                   name: 'href',
-                  required: true,
                   ui: {
                     validate: (value, data) => {
                       if (value && !value.startsWith('/')) {
