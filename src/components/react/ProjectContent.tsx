@@ -1,38 +1,7 @@
 import React from 'react';
 import { tinaField, useTina } from 'tinacms/dist/react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
-
-const components = {
-  ButtonWithText: ({ text, btnTxt, link }: { text: string; btnTxt: string; link: string }) => {
-    const isLocalReport =
-      link && (link.endsWith('.pdf') || link.endsWith('.doc') || link.endsWith('.docx')) && !link.startsWith('http');
-    return (
-      <div className="d-flex mb-3 pt-1 mx-auto justify-content-between align-items-center btn-with-text">
-        {text && <h3 className="h4 m-0 me-3">{text}</h3>}
-        {btnTxt && (
-          <a
-            href={isLocalReport ? `/reports/${link}` : link}
-            target="_blank"
-            className="btn btn-sm btn-outline-primary flex-shrink-0"
-          >
-            {btnTxt}
-          </a>
-        )}
-      </div>
-    );
-  },
-  Video: ({ src }: { src: string }) => {
-    if (!src) {
-      return <></>;
-    }
-
-    if (src.includes('https://')) {
-      return <iframe width="100%" height="400px" className="mx-auto d-block" src={src}></iframe>;
-    }
-
-    return <video className="mx-auto d-block w-100" src={`/videos/${src}`} controls></video>;
-  },
-};
+import TinaComponents from './TinaComponents';
 
 const ProjectContent = (props: { query: string; variables: object; data: any }) => {
   const { data } = useTina(props);
@@ -58,7 +27,7 @@ const ProjectContent = (props: { query: string; variables: object; data: any }) 
         </>
       )}
       <div data-tina-field={tinaField(data.projects, 'content')}>
-        <TinaMarkdown components={components} content={content}></TinaMarkdown>
+        <TinaMarkdown components={TinaComponents} content={content}></TinaMarkdown>
       </div>
       {sections &&
         sections.map((section: any) => {
@@ -66,7 +35,7 @@ const ProjectContent = (props: { query: string; variables: object; data: any }) 
           return (
             <div key={section.title} data-tina-field={tinaField(section, 'title')}>
               <h2 className="mt-4 pb-1 border-bottom mb-3">{section.title}</h2>
-              <TinaMarkdown components={components} content={section.content}></TinaMarkdown>
+              <TinaMarkdown components={TinaComponents} content={section.content}></TinaMarkdown>
               {template === 'ProjectsSectionsPartnerInstitutions' && section.logos && (
                 <div className="d-flex align-items-center justify-content-center flex-wrap row-gap-4 column-gap-5 mt-4">
                   {section.logos &&

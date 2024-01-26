@@ -2,6 +2,7 @@ import React from 'react';
 import { tinaField, useTina } from 'tinacms/dist/react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import NewsTag from './NewsTag';
+import TinaComponents from './TinaComponents';
 
 const NewsContent = (props: { query: string; variables: object; data: any }) => {
   const { data } = useTina(props);
@@ -18,7 +19,7 @@ const NewsContent = (props: { query: string; variables: object; data: any }) => 
         {dateTo && ` - ${new Date(dateTo).toLocaleString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}`}
       </p>
       <div data-tina-field={tinaField(data.news, 'body')}>
-        <TinaMarkdown content={body}></TinaMarkdown>
+        <TinaMarkdown components={TinaComponents} content={body}></TinaMarkdown>
       </div>
       {tags.length !== 0 && <hr></hr>}
       {tags &&

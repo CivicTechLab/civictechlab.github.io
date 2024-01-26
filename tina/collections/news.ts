@@ -43,6 +43,30 @@ const News: Collection = {
       label: 'Body',
       name: 'body',
       isBody: true,
+      description: "To insert a video, select 'Video' from the 'Embed' dropdown.",
+      parser: {
+        type: 'mdx',
+      },
+      templates: [
+        {
+          name: 'Video',
+          label: 'Video',
+          ui: {
+            itemProps: (item) => {
+              return { label: item?.src };
+            },
+          },
+          fields: [
+            {
+              name: 'src',
+              label: 'Source',
+              description:
+                'Enter a YouTube embedded link e.g. https://www.youtube.com/embed/dQw4w9WgXcQ?si=8HOpMTZzMyY_3Op7 or the filename of a video stored in the videos folder e.g. video.mp4.',
+              type: 'string',
+            },
+          ],
+        },
+      ],
     },
   ],
 };
