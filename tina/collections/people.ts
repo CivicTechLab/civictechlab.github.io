@@ -5,11 +5,17 @@ const People: Collection = {
   label: 'People',
   format: 'json',
   path: 'src/content/people',
+  ui: {
+    router: () => {
+      return '/people';
+    },
+  },
   fields: [
     {
       type: 'object',
       name: 'people',
       label: 'People',
+      description: 'Drag to reorder the order of appearance on the page.',
       list: true,
       ui: {
         itemProps: (item) => {

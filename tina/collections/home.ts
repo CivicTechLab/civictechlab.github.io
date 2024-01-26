@@ -5,11 +5,17 @@ const Home: Collection = {
   label: 'Home',
   format: 'json',
   path: 'src/content/home',
+  ui: {
+    router: () => {
+      return '/';
+    },
+  },
   fields: [
     {
       type: 'object',
       name: 'home',
       label: 'Home',
+      description: 'Drag to reorder the sections on the page.',
       list: true,
       ui: {
         itemProps: (item) => {
