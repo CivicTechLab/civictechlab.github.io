@@ -1,6 +1,7 @@
 import React from 'react';
 import Global from '../../content/global/global.json';
 import tinycolor from 'tinycolor2';
+import { tagQuery } from '../../store';
 
 const NewsTag = ({ tag }: { tag: string }) => {
   const tagToColor: any = Global.tags.tag.reduce((acc, curr) => {
@@ -12,9 +13,10 @@ const NewsTag = ({ tag }: { tag: string }) => {
 
   return (
     <a
-      href={`/news?tag=${tag}`}
+      href={'/news'}
       className={`btn ${tinycolor(tagToColor[tag]).isDark() ? 'link-light' : 'link-dark'} badge mb-1 me-1`}
       style={{ backgroundColor: `${tagToColor[tag]}` }}
+      onClick={() => tagQuery.set([tag])}
     >
       {tag}
     </a>
