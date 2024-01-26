@@ -36,11 +36,11 @@ const NewsList = ({ news }: any) => {
         return 1;
       }
 
-      if (a.data.dateFrom < b.data.dateFrom) {
+      if (new Date(a.data.dateFrom) < new Date(b.data.dateFrom)) {
         return 1;
       }
 
-      if (a.data.dateFrom < b.data.dateFrom) {
+      if (new Date(a.data.dateFrom) > new Date(b.data.dateFrom)) {
         return -1;
       }
 
@@ -56,11 +56,11 @@ const NewsList = ({ news }: any) => {
         return -1;
       }
 
-      if (a.data.dateFrom < b.data.dateFrom) {
+      if (new Date(a.data.dateFrom) < new Date(b.data.dateFrom)) {
         return -1;
       }
 
-      if (a.data.dateFrom < b.data.dateFrom) {
+      if (new Date(a.data.dateFrom) > new Date(b.data.dateFrom)) {
         return 1;
       }
 
