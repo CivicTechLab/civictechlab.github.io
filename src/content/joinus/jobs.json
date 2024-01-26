@@ -1,0 +1,48 @@
+{
+  "jobs": [
+    {
+      "title": "Research Assistant",
+      "description": "This position is for undergrad and graduate students currently enrolled in National University of Singapore. Students will be paid in line with the University’s payment guideline.\n",
+      "sections": [
+        {
+          "title": "Job Scope",
+          "content": "* Statistical analysis such as regressions, SEMs, ANOVAs\n* Sentiment and other emotion analysis\n* Social media/big data cleaning\n* Data visualization\n* Natural language processing using machine learning\n* Website or mobile app interface development\n"
+        },
+        {
+          "title": "Application Requirement",
+          "content": "* Portfolio or CV\n* Names and contact information of two references\n* Qualitative test\n* Online interview\n"
+        },
+        {
+          "title": "Application Deadline",
+          "content": "Ongoing\n"
+        },
+        {
+          "title": "Application Procedure",
+          "content": "Email [civictechlabnus@gmail.com](mailto:civictechlabnus@gmail.com) with the position title as the subject.\n"
+        }
+      ]
+    },
+    {
+      "title": "Research Intern",
+      "description": "This position is for anyone who is outside of National University of Singapore and wants to have some experience with our lab. Interns will be either unpaid or paid, depending on the mutually accepted agreement between the interns and the lab.\n",
+      "sections": [
+        {
+          "title": "Job Scope",
+          "content": "* Graphic design\n* Video making\n* Basic research skills such as\n  * conduct literature review\n  * conduct interviews and field observations\n  * help with running\n"
+        },
+        {
+          "title": "Application Requirement",
+          "content": "* Portfolio or CV\n* Names and contact information of two references\n* Qualitative test\n* Online interview\n"
+        },
+        {
+          "title": "Application Deadline",
+          "content": "Ongoing\n"
+        },
+        {
+          "title": "Application Procedure",
+          "content": "Email [civictechlabnus@gmail.com](mailto:civictechlabnus@gmail.com) with the position title as the subject.\n"
+        }
+      ]
+    }
+  ]
+}

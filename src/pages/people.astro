@@ -2,13 +2,8 @@
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 
-import { getEntry } from 'astro:content';
-import PersonCard from '../components/PersonCard.astro';
 import PeopleContent from '../components/react/PeopleContent';
 import client from '../../tina/__generated__/client';
-const currentEntry = await getEntry('people', 'current');
-const alumniEntry = await getEntry('people', 'alumni');
-const alumnus = alumniEntry.data.people;
 const currentResponse = await client.queries.people({ relativePath: 'current.json' });
 const alumiResponse = await client.queries.people({ relativePath: 'alumni.json' });
 ---

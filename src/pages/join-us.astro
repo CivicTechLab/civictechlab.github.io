@@ -1,7 +1,12 @@
 ---
+import client from '../../tina/__generated__/client';
 import Footer from '../components/Footer.astro';
+import JobContent from '../components/react/JobContent';
 import Layout from '../layouts/Layout.astro';
-const joinus = await Astro.glob('../content/joinus/*.md');
+import { getEntry } from 'astro:content';
+
+const joinus = await getEntry('joinus', 'jobs');
+const response = await client.queries.joinus({ relativePath: 'jobs.json' });
 ---
 
 <!doctype html>
@@ -11,10 +16,11 @@ const joinus = await Astro.glob('../content/joinus/*.md');
       <h1 class="text-center">Join Us</h1>
       <p class="text-center h6">
         We are expanding our team! Don't hesitate to join us if you find yourself a good fit for the following position{
-          joinus.length == 1 ? '' : 's'
+          joinus.data.jobs.length == 1 ? '' : 's'
         }!
       </p>
-      {
+      <JobContent client:load {...response} />
+      <!-- {
         joinus.map(({ Content, frontmatter }) => (
           <div class="card">
             <div class="card-body">
@@ -24,7 +30,7 @@ const joinus = await Astro.glob('../content/joinus/*.md');
             </div>
           </div>
         ))
-      }
+      } -->
     </main>
     <Footer />
   </body>

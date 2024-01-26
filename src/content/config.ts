@@ -102,10 +102,20 @@ const globalCollection = defineCollection({
 });
 
 const joinUsCollection = defineCollection({
-  type: 'content',
+  type: 'data',
   schema: z.object({
-    title: z.string(),
-    description: z.string(),
+    jobs: z.array(
+      z.object({
+        title: z.string().optional(),
+        description: z.string().optional(),
+        sections: z.array(
+          z.object({
+            title: z.string().optional(),
+            content: z.string().optional(),
+          }),
+        ),
+      }),
+    ),
   }),
 });
 
