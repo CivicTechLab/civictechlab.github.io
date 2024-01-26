@@ -20,7 +20,7 @@ const response = await client.queries.projects({ relativePath: `${project.id}.js
 
 <Layout title={project.data.title}>
   <body>
-    <main class="container prose">
+    <main class="container container-base prose">
       <ProjectContent client:tina {...response} />
     </main>
     <Footer />

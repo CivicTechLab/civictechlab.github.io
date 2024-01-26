@@ -31,7 +31,11 @@ main {
   margin-top: 0;
 }
 
-.prose {
+.container.container-base {
+  max-width: 828px;
+}
+
+.container.prose {
   line-height: 1.625rem;
   word-break: break-word;
 }

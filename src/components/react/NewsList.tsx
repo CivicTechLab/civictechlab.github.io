@@ -166,12 +166,10 @@ const NewsList = ({ news }: any) => {
           <div className="d-flex justify-content-center mt-2" key={n.slug}>
             <div className="card" style={{ maxWidth: '44rem', width: '100%' }}>
               <div className="card-body">
-                <div className="d-flex gap-1 flex-wrap">
-                  {n.data.tags &&
-                    n.data.tags.map((tag: string) => {
-                      return <NewsTag tag={tag} key={tag}></NewsTag>;
-                    })}
-                </div>
+                {n.data.tags &&
+                  n.data.tags.map((tag: string) => {
+                    return <NewsTag tag={tag} key={tag}></NewsTag>;
+                  })}
                 <a
                   href={`/news/${n.slug}`}
                   className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-75-hover"

@@ -11,7 +11,7 @@ const NewsTag = ({ tag }: { tag: string }) => {
   return (
     <a
       href={`/news?tag=${tag}`}
-      className="btn link-light badge mb-1"
+      className="btn link-light badge mb-1 me-1"
       style={{ backgroundColor: `${tagToColor[tag]}` }}
     >
       {tag}

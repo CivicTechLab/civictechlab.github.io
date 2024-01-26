@@ -1,0 +1,28 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import client from '../../../tina/__generated__/client';
+import Footer from '../../components/Footer.astro';
+import NewsContent from '../../components/react/NewsContent';
+
+export async function getStaticPaths() {
+  const news = await getCollection('news');
+
+  return news.map((n) => ({
+    params: { slug: n.slug },
+    props: n,
+  }));
+}
+type Props = CollectionEntry<'news'>;
+const news = Astro.props;
+const response = await client.queries.news({ relativePath: `${news.id}` });
+---
+
+<Layout title={news.data.title}>
+  <body>
+    <main class="container container-base prose">
+      <NewsContent client:load {...response} />
+    </main>
+    <Footer />
+  </body>
+</Layout>
