@@ -16,9 +16,7 @@ const alumiResponse = await client.queries.people({ relativePath: 'alumni.json' 
       <div class="row">
         <PeopleContent client:tina {...currentResponse} />
         <h2 class="h1 text-center mt-4">Alumni</h2>
-        <div class="row">
-          <PeopleContent client:tina {...alumiResponse} />
-        </div>
+        <PeopleContent client:tina {...alumiResponse} />
       </div>
     </main>
     <Footer />
