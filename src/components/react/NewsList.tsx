@@ -77,9 +77,12 @@ const NewsList = ({ news }: any) => {
   return (
     <>
       <h1 className="text-center">What's New</h1>
-      <div className="mx-auto d-flex justify-content-between" style={{ width: '44rem', maxWidth: '100%' }}>
+      <div
+        className="mx-auto d-flex column-gap-4 row-gap-1 flex-sm-row flex-column justify-content-between"
+        style={{ width: '44rem', maxWidth: '100%' }}
+      >
         <input
-          className="form-control w-25"
+          className="form-control"
           type="text"
           placeholder="Search news"
           value={searchQuery || ''}

@@ -15,16 +15,18 @@ const projects = await getCollection('projects');
         {
           projects.map((project) => {
             return (
-              <div class="col-12 p-2">
-                <div class="card">
-                  <div class="card-body">
-                    <a
-                      href={`/projects/${project.id.toLowerCase()}`}
-                      class="link-dark link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                    >
-                      <h2 class="h4">{project.data.title}</h2>
-                    </a>
-                    {project.data.description && <p class="card-text">{project.data.description}</p>}
+              <div class="col-12 d-block">
+                <div class="mx-auto p-2" style={{ width: '56rem', maxWidth: '100%' }}>
+                  <div class="card">
+                    <div class="card-body">
+                      <a
+                        href={`/projects/${project.id.toLowerCase()}`}
+                        class="link-dark link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                      >
+                        <h2 class="h4">{project.data.title}</h2>
+                      </a>
+                      {project.data.description && <p class="card-text">{project.data.description}</p>}
+                    </div>
                   </div>
                 </div>
               </div>
