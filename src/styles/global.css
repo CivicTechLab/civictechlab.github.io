@@ -31,8 +31,10 @@ main {
   margin-top: 0;
 }
 
-.container.container-base {
-  max-width: 828px;
+@media screen and (min-width: 992px) {
+  .container.container-base {
+    max-width: 828px;
+  }
 }
 
 .container.prose {
