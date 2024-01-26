@@ -1,13 +1,13 @@
 import { defineCollection, z } from 'astro:content';
 
-const blogCollection = defineCollection({
+const newsCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    heroImage: z.string().optional(),
+    dateFrom: z.string().optional(),
+    dateTo: z.string().optional(),
+    tags: z.string().optional(),
   }),
 });
 
@@ -128,7 +128,7 @@ const joinUsCollection = defineCollection({
 });
 
 export const collections = {
-  blog: blogCollection,
+  news: newsCollection,
   home: homeCollection,
   projects: projectsCollection,
   people: peopleCollection,
