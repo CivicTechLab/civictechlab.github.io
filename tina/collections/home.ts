@@ -21,13 +21,11 @@ const Home: Collection = {
           type: 'string',
           label: 'Title',
           name: 'title',
-          required: true,
         },
         {
           type: 'string',
           label: 'Description',
           name: 'description',
-          required: true,
           ui: {
             component: 'textarea',
           },

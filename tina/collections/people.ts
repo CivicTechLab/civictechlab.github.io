@@ -21,19 +21,16 @@ const People: Collection = {
           type: 'string',
           label: 'Name',
           name: 'name',
-          required: true,
         },
         {
           type: 'string',
           label: 'Description',
           name: 'description',
-          required: true,
         },
         {
           type: 'image',
           label: 'Image',
           name: 'imgSrc',
-          required: true,
         },
         {
           type: 'string',
@@ -41,14 +38,15 @@ const People: Collection = {
           name: 'website',
           ui: {
             validate(value) {
-              const expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+              const expression =
+                /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
               const regex = new RegExp(expression);
               if (value && !value.match(regex)) {
-                return "Invalid website. Website should begin with either http or https."
+                return 'Invalid website. Website should begin with either http or https.';
               }
             },
-          }
-        }
+          },
+        },
       ],
     },
   ],
