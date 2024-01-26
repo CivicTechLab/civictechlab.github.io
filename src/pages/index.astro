@@ -3,9 +3,9 @@ import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 import Logo from '../assets/logo.gif';
 
-import { getEntry } from 'astro:content';
-const entry = await getEntry('home', 'home');
-const data = entry.data.home;
+import client from '../../tina/__generated__/client';
+import HomeContent from '../components/react/HomeContent';
+const response = await client.queries.home({ relativePath: 'home.json' });
 ---
 
 <!doctype html>
@@ -15,21 +15,7 @@ const data = entry.data.home;
       <div class="d-flex justify-content-center pb-4">
         <img class="rounded mw-100" src={Logo.src} alt="CivicTech Lab" />
       </div>
-      <div class="row">
-        {
-          data.map((d) => (
-            <div class="col-md-6 py-2">
-              <div class="card h-100 text-center">
-                {d.imgSrc && <img src={d.imgSrc} class="card-img-top" alt="" />}
-                <div class="card-body">
-                  <h5 class="card-title">{d.title}</h5>
-                  <p class="card-text">{d.description}</p>
-                </div>
-              </div>
-            </div>
-          ))
-        }
-      </div>
+      <HomeContent client:tina {...response} />
     </main>
     <Footer />
   </body>
@@ -39,10 +25,5 @@ const data = entry.data.home;
     height: auto;
     width: auto;
     max-height: 348px;
-  }
-
-  img.card-img-top {
-    object-fit: cover;
-    height: 200px;
   }
 </style>

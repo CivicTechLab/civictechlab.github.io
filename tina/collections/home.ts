@@ -28,6 +28,9 @@ const Home: Collection = {
           label: 'Description',
           name: 'description',
           required: true,
+          ui: {
+            component: 'textarea',
+          },
         },
         {
           type: 'image',
