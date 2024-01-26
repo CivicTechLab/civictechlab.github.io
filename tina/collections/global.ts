@@ -31,6 +31,11 @@ const Global: Collection = {
               name: 'label',
             },
             {
+              type: 'string',
+              label: 'Link',
+              name: 'href',
+            },
+            {
               type: 'boolean',
               label: 'Is project list?',
               name: 'isProjectList',

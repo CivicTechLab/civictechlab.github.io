@@ -75,6 +75,7 @@ const globalCollection = defineCollection({
       nav: z.array(
         z.object({
           label: z.string(),
+          href: z.string(),
         }),
       ),
     }),

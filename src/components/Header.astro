@@ -9,6 +9,8 @@ const projectList = projects.map((project) => {
     title: project.data.title,
   };
 });
+import Global from '../content/global/global.json';
+const navLinks = Global.header.nav;
 ---
 
 <nav class="navbar sticky-top border-bottom navbar-expand-lg bg-body-tertiary">
@@ -29,40 +31,42 @@ const projectList = projects.map((project) => {
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <HeaderLink class="nav-link" href="/">Home</HeaderLink>
-        </li>
-        <li class="nav-item">
-          <HeaderLink class="nav-link" href="/people">People</HeaderLink>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="/projects"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Projects
-          </a>
-          <ul class="dropdown-menu">
-            {
-              projectList.map((p) => (
-                <li>
-                  <HeaderLink class="dropdown-item" href={`/projects/${p.slug}`}>
-                    {p.title}
-                  </HeaderLink>
+        {
+          navLinks.map((link) => {
+            if (link.isProjectList) {
+              return (
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href={link.href}
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Projects
+                  </a>
+                  <ul class="dropdown-menu">
+                    {projectList.map((p) => (
+                      <li>
+                        <HeaderLink class="dropdown-item" href={`${link.href}/${p.slug}`}>
+                          {p.title}
+                        </HeaderLink>
+                      </li>
+                    ))}
+                  </ul>
                 </li>
-              ))
+              );
             }
-          </ul>
-        </li>
-        <li class="nav-item">
-          <HeaderLink class="nav-link" href="/news">News</HeaderLink>
-        </li>
-        <li class="nav-item">
-          <HeaderLink class="nav-link" href="/join-us">Join Us</HeaderLink>
-        </li>
+
+            return (
+              <li class="nav-item">
+                <HeaderLink class="nav-link" href={link.href}>
+                  {link.label}
+                </HeaderLink>
+              </li>
+            );
+          })
+        }
       </ul>
     </div>
   </div>

@@ -2,13 +2,25 @@
   "header": {
     "nav": [
       {
-        "label": "Home"
+        "label": "Home",
+        "href": "/"
       },
       {
-        "label": "About"
+        "label": "People",
+        "href": "/people"
       },
       {
-        "label": "Blog"
+        "label": "Projects",
+        "href": "/projects",
+        "isProjectList": true
+      },
+      {
+        "label": "News",
+        "href": "/news"
+      },
+      {
+        "label": "Join Us",
+        "href": "/join-us"
       }
     ]
   },
