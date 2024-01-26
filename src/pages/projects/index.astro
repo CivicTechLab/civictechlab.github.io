@@ -41,4 +41,8 @@ const projects = await getCollection('projects');
   a:hover h2 {
     color:;
   }
+
+  div.card-body:not(:has(p)) h2 {
+    margin-bottom: 0;
+  }
 </style>
