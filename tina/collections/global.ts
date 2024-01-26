@@ -135,6 +135,31 @@ const Global: Collection = {
         },
       ],
     },
+    {
+      label: 'News Tags',
+      name: 'tags',
+      type: 'object',
+      fields: [
+        {
+          label: 'Tag',
+          name: 'tag',
+          type: 'object',
+          list: true,
+          ui: {
+            itemProps: (item) => {
+              return { label: item?.name };
+            },
+          },
+          fields: [
+            {
+              type: 'string',
+              name: 'name',
+              label: 'Tag Name',
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
 
