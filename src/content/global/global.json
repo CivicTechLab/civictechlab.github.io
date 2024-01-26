@@ -86,6 +86,10 @@
         "color": "#0066FF"
       },
       {
+        "name": "Gov Tech",
+        "color": "#DDF2EB"
+      },
+      {
         "name": "Online Deliberation",
         "color": "#D1495B"
       },
@@ -98,8 +102,16 @@
         "color": "#DFF3E3"
       },
       {
+        "name": "Chinese",
+        "color": "#DAD7CD"
+      },
+      {
         "name": "Community",
         "color": "#BE8A60"
+      },
+      {
+        "name": "Tools",
+        "color": "#003049"
       },
       {
         "name": "Events",
@@ -122,10 +134,6 @@
         "color": "#496DDB"
       },
       {
-        "name": "Gov Tech",
-        "color": "#DDF2EB"
-      },
-      {
         "name": "FOSS",
         "color": "#FCD3DE"
       },
@@ -140,6 +148,10 @@
       {
         "name": "China",
         "color": "#EDAE49"
+      },
+      {
+        "name": "Germany",
+        "color": "#0088DD"
       },
       {
         "name": "Japan",
