@@ -19,22 +19,25 @@ const Projects: Collection = {
       required: true,
     },
     {
+      type: 'string',
+      label: 'Description',
+      name: 'description',
+      description: 'Enter a description below the title.',
+      ui: {
+        component: 'textarea',
+      },
+    },
+    {
       type: 'image',
       label: 'Hero Image',
       name: 'heroImgSrc',
+      description: 'Displays an image below the description.',
     },
     {
       type: 'rich-text',
       label: 'Caption',
       name: 'caption',
-    },
-    {
-      type: 'string',
-      label: 'Description',
-      name: 'description',
-      ui: {
-        component: 'textarea',
-      },
+      description: 'Displays a caption below the hero image.',
     },
     {
       type: 'rich-text',
@@ -89,6 +92,8 @@ const Projects: Collection = {
               type: 'rich-text',
               label: 'Section Content',
               name: 'content',
+              description:
+                "To insert a video, select 'Video' from the 'Embed' dropdown. To link to an email, prepend the email with 'mailto'. For example, if linking to civictechlabnus@gmail.com, highlight the corresponding text and add a link with the URL 'mailto:civictechlabnus@gmail.com'.",
               parser: {
                 type: 'mdx',
               },

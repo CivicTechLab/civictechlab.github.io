@@ -13,10 +13,12 @@ const Global: Collection = {
       type: 'object',
       label: 'Header',
       name: 'header',
+      description: 'Controls the top navigation in the application.',
       fields: [
         {
           type: 'object',
           label: 'Nav Links',
+          description: 'WARNING: Changing or deleting any of these fields might break the navigation on the website.',
           name: 'nav',
           list: true,
           ui: {
@@ -48,6 +50,7 @@ const Global: Collection = {
       type: 'object',
       label: 'Footer',
       name: 'footer',
+      description: 'Controls the content displayed in the footer.',
       fields: [
         {
           type: 'object',
@@ -63,6 +66,8 @@ const Global: Collection = {
               type: 'rich-text',
               label: 'Description',
               name: 'description',
+              description:
+                "To link to an email, prepend the email with 'mailto'. For example, if linking to civictechlabnus@gmail.com, highlight the corresponding text and add a link with the URL 'mailto:civictechlabnus@gmail.com'.",
             },
           ],
         },
@@ -80,6 +85,8 @@ const Global: Collection = {
               type: 'rich-text',
               label: 'Description',
               name: 'description',
+              description:
+                "To link to an email, prepend the email with 'mailto'. For example, if linking to civictechlabnus@gmail.com, highlight the corresponding text and add a link with the URL 'mailto:civictechlabnus@gmail.com'.",
             },
           ],
         },
@@ -144,11 +151,14 @@ const Global: Collection = {
       label: 'News Tags',
       name: 'tags',
       type: 'object',
+      description: 'Controls the tags available when creating a news article.',
       fields: [
         {
           label: 'Tag',
           name: 'tag',
           type: 'object',
+          description:
+            'WARNING: Deleting a tag may cause the news page to not function correctly. Only delete a tag when you are sure it is not in use.',
           list: true,
           ui: {
             itemProps: (item) => {

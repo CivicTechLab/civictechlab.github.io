@@ -5,6 +5,11 @@ const JoinUs: Collection = {
   label: 'Join Us',
   format: 'json',
   path: 'src/content/joinus',
+  ui: {
+    router: () => {
+      return `/join-us`;
+    },
+  },
   fields: [
     {
       type: 'object',

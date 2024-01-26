@@ -7,6 +7,11 @@ const News: Collection = {
   label: 'News',
   format: 'mdx',
   path: 'src/content/news',
+  ui: {
+    router: ({ document }) => {
+      return `/news/${document._sys.filename.toLowerCase()}`;
+    },
+  },
   fields: [
     {
       type: 'string',
@@ -19,6 +24,7 @@ const News: Collection = {
       type: 'string',
       label: 'Date From',
       name: 'dateFrom',
+      description: 'The event start date.',
       ui: {
         component: 'date',
       },
@@ -27,6 +33,7 @@ const News: Collection = {
       type: 'string',
       label: 'Date To',
       name: 'dateTo',
+      description: 'The event end date.',
       ui: {
         component: 'date',
       },
@@ -37,6 +44,7 @@ const News: Collection = {
       name: 'tags',
       list: true,
       options: tags,
+      description: 'Tags are displayed in the order they are selected.',
     },
     {
       type: 'rich-text',
