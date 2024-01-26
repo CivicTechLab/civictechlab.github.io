@@ -1,15 +1,16 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Layout from '../layouts/Layout.astro';
 
 import { getEntry } from 'astro:content';
 import PersonCard from '../components/PersonCard.astro';
+import PeopleContent from '../components/react/PeopleContent';
+import client from '../../tina/__generated__/client';
 const currentEntry = await getEntry('people', 'current');
 const alumniEntry = await getEntry('people', 'alumni');
-const currentPeople = currentEntry.data.people;
 const alumnus = alumniEntry.data.people;
+const currentResponse = await client.queries.people({ relativePath: 'current.json' });
+const alumiResponse = await client.queries.people({ relativePath: 'alumni.json' });
 ---
 
 <!doctype html>
@@ -18,13 +19,13 @@ const alumnus = alumniEntry.data.people;
     <main class="container">
       <h1 class="text-center">Current Team</h1>
       <div class="row">
-        {currentPeople.map((person) => <PersonCard person={person} />)}
+        <PeopleContent client:tina {...currentResponse} />
+        <h2 class="h1 text-center mt-4">Alumni</h2>
+        <div class="row">
+          <PeopleContent client:tina {...alumiResponse} />
+        </div>
       </div>
-      <h2 class="h1 text-center mt-4">Alumni</h2>
-      <div class="row">
-        {alumnus.map((person) => <PersonCard person={person} />)}
-      </div>
+      <Footer />
     </main>
-    <Footer />
   </body>
 </Layout>
