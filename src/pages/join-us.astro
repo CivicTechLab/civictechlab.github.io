@@ -12,25 +12,14 @@ const response = await client.queries.joinus({ relativePath: 'jobs.json' });
 <!doctype html>
 <Layout title="Join Us">
   <body>
-    <main class="container">
+    <main class="container container-base">
       <h1 class="text-center">Join Us</h1>
       <p class="text-center h6">
         We are expanding our team! Don't hesitate to join us if you find yourself a good fit for the following position{
           joinus.data.jobs.length == 1 ? '' : 's'
         }!
       </p>
-      <JobContent client:load {...response} />
-      <!-- {
-        joinus.map(({ Content, frontmatter }) => (
-          <div class="card">
-            <div class="card-body">
-              <h2>{frontmatter.title}</h2>
-              <p>{frontmatter.description}</p>
-              <Content />
-            </div>
-          </div>
-        ))
-      } -->
+      <JobContent client:tina {...response} />
     </main>
     <Footer />
   </body>
