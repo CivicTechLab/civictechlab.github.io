@@ -101,9 +101,15 @@ const NewsList = ({ news }: any) => {
                 <li className="list-group-item" style={{ border: 'none' }}>
                   <button
                     className="btn btn-sm btn-outline-primary w-100"
-                    onClick={() => setTagQuery([...tagList.map((t: { name: string }) => t.name)])}
+                    onClick={() => {
+                      if (tagQuery.length != tagList.length) {
+                        setTagQuery([...tagList.map((t: { name: string }) => t.name)]);
+                      } else {
+                        setTagQuery([]);
+                      }
+                    }}
                   >
-                    Select All
+                    {tagQuery.length != tagList.length ? 'Select All' : 'Clear'}
                   </button>
                 </li>
                 {tagList.map((tag) => {

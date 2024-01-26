@@ -106,6 +106,14 @@
         "color": "#496DDB"
       },
       {
+        "name": "Gov Tech",
+        "color": "#DDF2EB"
+      },
+      {
+        "name": "FOSS",
+        "color": "#FCD3DE"
+      },
+      {
         "name": "Asia",
         "color": "#E5CDC8"
       },
@@ -118,8 +126,16 @@
         "color": "#EDAE49"
       },
       {
+        "name": "Japan",
+        "color": "#8B2635"
+      },
+      {
         "name": "India",
         "color": "#14080E"
+      },
+      {
+        "name": "Indonesia",
+        "color": "#E0E2DB"
       },
       {
         "name": "Poland",
