@@ -97,7 +97,13 @@ const ProjectContent = (props: { query: string; variables: object; data: any }) 
                       }
 
                       return (
-                        <a key={logo.name || index} href={logo.link} target="_blank" rel="noopener noreferrer ">
+                        <a
+                          data-tina-field={tinaField(logo, 'name')}
+                          key={logo.name || index}
+                          href={logo.link}
+                          target="_blank"
+                          rel="noopener noreferrer "
+                        >
                           <img
                             src={logo.imgSrc}
                             style={{ maxWidth: '300px', maxHeight: '150px' }}
