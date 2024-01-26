@@ -77,10 +77,7 @@ const NewsList = ({ news }: any) => {
   return (
     <>
       <h1 className="text-center">What's New</h1>
-      <div
-        className="mx-auto d-flex column-gap-4 row-gap-1 flex-sm-row flex-column justify-content-between"
-        style={{ width: '44rem', maxWidth: '100%' }}
-      >
+      <div className="mx-auto d-flex column-gap-4 row-gap-1 flex-sm-row flex-column justify-content-between">
         <input
           className="form-control"
           type="text"
@@ -88,7 +85,7 @@ const NewsList = ({ news }: any) => {
           value={searchQuery || ''}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <div className="d-flex gap-1">
+        <div className="d-flex justify-content-between gap-1">
           <div className="dropdown">
             <button
               className="btn btn-outline-primary dropdown-toggle"
@@ -153,7 +150,7 @@ const NewsList = ({ news }: any) => {
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-2" style={{ width: '44rem', maxWidth: '100%' }}>
+      <div className="mx-auto mt-2">
         {searchQuery && (
           <p>
             Searching '<b>{searchQuery}</b>'
@@ -164,7 +161,7 @@ const NewsList = ({ news }: any) => {
       {newsToShow.map((n: NewsProps) => {
         return (
           <div className="d-flex justify-content-center mt-2" key={n.slug}>
-            <div className="card" style={{ maxWidth: '44rem', width: '100%' }}>
+            <div className="card" style={{ width: '100%' }}>
               <div className="card-body">
                 {n.data.tags &&
                   n.data.tags.map((tag: string) => {

@@ -27,20 +27,10 @@ const components = {
     }
 
     if (src.includes('https://')) {
-      return (
-        <iframe
-          width="100%"
-          height="400px"
-          className="mx-auto d-block"
-          style={{ maxWidth: '700px' }}
-          src={src}
-        ></iframe>
-      );
+      return <iframe width="100%" height="400px" className="mx-auto d-block" src={src}></iframe>;
     }
 
-    return (
-      <video className="mx-auto d-block w-100" src={`/videos/${src}`} style={{ maxWidth: '700px' }} controls></video>
-    );
+    return <video className="mx-auto d-block w-100" src={`/videos/${src}`} controls></video>;
   },
 };
 

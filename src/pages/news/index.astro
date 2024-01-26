@@ -1,18 +1,16 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import Footer from '../../components/Footer.astro';
 import Layout from '../../layouts/Layout.astro';
 import NewsList from '../../components/react/NewsList';
-import { getEntry } from 'astro:content';
 
 const news = await getCollection('news');
-const global = await getEntry('global', 'global');
 ---
 
 <!doctype html>
 <Layout title="News">
   <body>
-    <main class="container">
+    <main class="container container-base">
       <NewsList client:load news={news} />
     </main>
     <Footer />

@@ -46,7 +46,6 @@ main {
 
 .prose p > img {
   width: 100%;
-  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
