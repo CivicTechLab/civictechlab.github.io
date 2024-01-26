@@ -97,7 +97,15 @@ const NewsList = ({ news }: any) => {
               Tags <span className="badge text-bg-primary rounded-pill">{tagQuery.length}</span>
             </button>
             <ul className="dropdown-menu dropdown-menu-end">
-              <ul className="list-group">
+              <ul className="list-group" style={{ width: '200px' }}>
+                <li className="list-group-item" style={{ border: 'none' }}>
+                  <button
+                    className="btn btn-sm btn-outline-primary w-100"
+                    onClick={() => setTagQuery([...tagList.map((t: { name: string }) => t.name)])}
+                  >
+                    Select All
+                  </button>
+                </li>
                 {tagList.map((tag) => {
                   return (
                     <li className="list-group-item" style={{ border: 'none' }} key={tag.name}>

@@ -62,12 +62,60 @@
   "tags": {
     "tag": [
       {
+        "name": "Cultural Publics",
+        "color": "#30638E"
+      },
+      {
         "name": "Civic Tech",
         "color": "#0066FF"
       },
       {
+        "name": "Online Deliberation",
+        "color": "#D1495B"
+      },
+      {
+        "name": "Youth Engagement",
+        "color": "#F5F5F5"
+      },
+      {
+        "name": "Conferences",
+        "color": "#DFF3E3"
+      },
+      {
         "name": "Presentations",
         "color": "#190933"
+      },
+      {
+        "name": "Interviews",
+        "color": "#F6CA83"
+      },
+      {
+        "name": "Workshop",
+        "color": "#49475B"
+      },
+      {
+        "name": "Asia",
+        "color": "#E5CDC8"
+      },
+      {
+        "name": "China",
+        "color": "#EDAE49"
+      },
+      {
+        "name": "India",
+        "color": "#14080E"
+      },
+      {
+        "name": "Singapore",
+        "color": "#FFD1BA"
+      },
+      {
+        "name": "South Korea",
+        "color": "#704C5E"
+      },
+      {
+        "name": "South Africa",
+        "color": "#FBC2B5"
       },
       {
         "name": "Philippines",

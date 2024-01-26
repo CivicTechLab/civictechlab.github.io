@@ -1,6 +1,6 @@
 import type { Collection } from 'tinacms';
 import Globals from '../../src/content/global/global.json';
-const tags = Globals.tags.tag.map((t: { name: string; color: string }) => t.name);
+const tags = Globals.tags.tag.filter((t) => !(!t || !t.color || !t.name)).map((t: any) => t.name);
 
 const News: Collection = {
   name: 'news',

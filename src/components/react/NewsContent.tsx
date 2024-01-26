@@ -21,11 +21,11 @@ const NewsContent = (props: { query: string; variables: object; data: any }) => 
       <div data-tina-field={tinaField(data.news, 'body')}>
         <TinaMarkdown components={TinaComponents} content={body}></TinaMarkdown>
       </div>
-      {tags.length !== 0 && <hr></hr>}
+      {(!tags || tags.length !== 0) && <hr></hr>}
       {tags &&
         tags.map((tag: string) => (
-          <span data-tina-field={tinaField(data.news, 'tags')}>
-            <NewsTag tag={tag} key={tag}></NewsTag>
+          <span data-tina-field={tinaField(data.news, 'tags')} key={tag}>
+            <NewsTag tag={tag}></NewsTag>
           </span>
         ))}
     </>
