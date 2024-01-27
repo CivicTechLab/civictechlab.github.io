@@ -14,11 +14,11 @@ const NewsContent = (props: { query: string; variables: object; data: any }) => 
         {title}
       </h1>
       <p data-tina-field={tinaField(data.news, 'dateFrom')} className="text-body-secondary text-center h6 mb-4">
-        {!otherDates && dateFrom && new Date(dateFrom).toLocaleString('en-US', { day: 'numeric', month: 'long' })}
+        {!otherDates && dateFrom && new Date(dateFrom).toLocaleString('en-SG', { day: 'numeric', month: 'long' })}
         {!otherDates &&
           (!dateTo || new Date(dateTo).getFullYear() !== new Date(dateFrom).getFullYear()) &&
           `, ${new Date(dateFrom).getFullYear()}`}
-        {dateTo && ` - ${new Date(dateTo).toLocaleString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}`}
+        {dateTo && ` - ${new Date(dateTo).toLocaleString('en-SG', { day: 'numeric', month: 'long', year: 'numeric' })}`}
         {otherDates &&
           formatter.format(
             [{ date: dateFrom }].concat(otherDates).map((d: { date: string }, index: number) => {
@@ -26,9 +26,9 @@ const NewsContent = (props: { query: string; variables: object; data: any }) => 
                 index < otherDates.length &&
                 new Date(otherDates[index].date).getFullYear() === new Date(d.date).getFullYear()
               ) {
-                return new Date(d.date).toLocaleString('en-US', { day: 'numeric', month: 'long' });
+                return new Date(d.date).toLocaleString('en-SG', { day: 'numeric', month: 'long' });
               }
-              return new Date(d.date).toLocaleString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
+              return new Date(d.date).toLocaleString('en-SG', { day: 'numeric', month: 'long', year: 'numeric' });
             }),
           )}
       </p>
