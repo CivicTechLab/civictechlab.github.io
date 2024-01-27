@@ -1,6 +1,7 @@
 import React from 'react';
 import { tinaField, useTina } from 'tinacms/dist/react';
 import { TinaMarkdown, type TinaMarkdownContent } from 'tinacms/dist/rich-text';
+import TinaComponents from './TinaComponents';
 
 type JobProps = {
   title: string;
@@ -21,12 +22,12 @@ const JobContent = (props: { query: string; variables: object; data: any }) => {
           <div data-tina-field={tinaField(job)} className="card" style={{ marginTop: '20px' }}>
             <div className="card-body">
               <h2>{job.title}</h2>
-              <TinaMarkdown content={job.description}></TinaMarkdown>
+              <TinaMarkdown components={TinaComponents} content={job.description}></TinaMarkdown>
               {job.sections.map((section) => {
                 return (
                   <div data-tina-field={tinaField(section)}>
                     <h3 className="h4">{section.title}</h3>
-                    <TinaMarkdown content={section.content}></TinaMarkdown>
+                    <TinaMarkdown components={TinaComponents} content={section.content}></TinaMarkdown>
                   </div>
                 );
               })}

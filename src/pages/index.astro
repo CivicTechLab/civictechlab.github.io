@@ -13,7 +13,7 @@ const response = await client.queries.home({ relativePath: 'home.json' });
   <body>
     <main class="container container-base">
       <div class="d-flex justify-content-center mb-4">
-        <img class="rounded mw-100" src={Logo.src} alt="CivicTech Lab" />
+        <img height="504" width="896" class="rounded mw-100" src={Logo.src} alt="CivicTech Lab" />
       </div>
       <HomeContent client:tina {...response} />
     </main>
