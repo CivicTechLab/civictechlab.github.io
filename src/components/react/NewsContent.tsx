@@ -40,7 +40,7 @@ const NewsContent = (props: { query: string; variables: object; data: any }) => 
       {tags &&
         tags.map((tag: string) => (
           <span data-tina-field={tinaField(data.news, 'tags')} key={tag}>
-            <NewsTag isLink tag={tag}></NewsTag>
+            <NewsTag isLink setTag tag={tag}></NewsTag>
           </span>
         ))}
     </>

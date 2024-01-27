@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Global from '../../content/global/global.json';
 import NewsTag from './NewsTag';
 import { useStore } from '@nanostores/react';
-import { tagQuery } from '../../store';
+import { tagQuery, sortOrder } from '../../store';
 
 type NewsProps = {
   body: string;
@@ -20,7 +20,7 @@ type NewsProps = {
 const NewsList = ({ news }: any) => {
   const tagList = Global.tags.tag;
   const $tagQuery = useStore(tagQuery);
-  const [sortOrder, setSortOrder] = useState<'latest' | 'earliest'>('latest');
+  const $sortOrder = useStore(sortOrder);
   const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
 
   const sorters = {
@@ -69,7 +69,7 @@ const NewsList = ({ news }: any) => {
   const newsToShow = news
     .filter((n: NewsProps) => n.data.tags.some((v: string) => $tagQuery.includes(v)))
     .filter((n: NewsProps) => n.data.title.toLowerCase().includes(searchQuery.toLowerCase()))
-    .sort(sorters[sortOrder]);
+    .sort(sorters[$sortOrder]);
 
   return (
     <>
@@ -140,19 +140,19 @@ const NewsList = ({ news }: any) => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              {sortOrder === 'latest' ? 'Latest First' : 'Earliest First'}
+              {$sortOrder === 'latest' ? 'Latest First' : 'Earliest First'}
             </button>
             <ul className="dropdown-menu dropdown-menu-end">
               <li>
                 <button
-                  className={`dropdown-item ${sortOrder === 'latest' ? 'active' : ''}`}
-                  onClick={() => setSortOrder('latest')}
+                  className={`dropdown-item ${$sortOrder === 'latest' ? 'active' : ''}`}
+                  onClick={() => sortOrder.set('latest')}
                 >
                   Latest First
                 </button>
                 <button
-                  className={`dropdown-item ${sortOrder === 'earliest' ? 'active' : ''}`}
-                  onClick={() => setSortOrder('earliest')}
+                  className={`dropdown-item ${$sortOrder === 'earliest' ? 'active' : ''}`}
+                  onClick={() => sortOrder.set('earliest')}
                 >
                   Earliest First
                 </button>
@@ -176,7 +176,7 @@ const NewsList = ({ news }: any) => {
               <div className="card-body">
                 {n.data.tags &&
                   n.data.tags.map((tag: string) => {
-                    return <NewsTag tag={tag} key={tag} isLink></NewsTag>;
+                    return <NewsTag tag={tag} key={tag} setTag></NewsTag>;
                   })}
                 <a
                   href={`/news/${n.slug}`}
