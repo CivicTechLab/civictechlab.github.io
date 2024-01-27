@@ -204,13 +204,17 @@ const NewsList = ({ news }: any) => {
                     <p className="card-subtitle text-body-secondary" style={{ fontSize: '0.875rem' }}>
                       {!n.data.otherDates &&
                         n.data.dateFrom &&
-                        new Date(n.data.dateFrom).toLocaleString('en-SG', { day: 'numeric', month: 'long' })}
+                        new Date(n.data.dateFrom).toLocaleString('en-US', {
+                          day: 'numeric',
+                          month: 'long',
+                          timeZone: 'Asia/Singapore',
+                        })}
                       {!n.data.otherDates &&
                         (!n.data.dateTo ||
                           new Date(n.data.dateTo).getFullYear() !== new Date(n.data.dateFrom).getFullYear()) &&
                         `, ${new Date(n.data.dateFrom).getFullYear()}`}
                       {n.data.dateTo &&
-                        ` - ${new Date(n.data.dateTo).toLocaleString('en-SG', { day: 'numeric', month: 'long', year: 'numeric' })}`}
+                        ` - ${new Date(n.data.dateTo).toLocaleString('en-US', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Singapore' })}`}
                       {n.data.otherDates &&
                         formatter.format(
                           [{ date: n.data.dateFrom }]
@@ -220,12 +224,17 @@ const NewsList = ({ news }: any) => {
                                 index < n.data.otherDates.length &&
                                 new Date(n.data.otherDates[index].date).getFullYear() === new Date(d.date).getFullYear()
                               ) {
-                                return new Date(d.date).toLocaleString('en-SG', { day: 'numeric', month: 'long' });
+                                return new Date(d.date).toLocaleString('en-US', {
+                                  day: 'numeric',
+                                  month: 'long',
+                                  timeZone: 'Asia/Singapore',
+                                });
                               }
-                              return new Date(d.date).toLocaleString('en-SG', {
+                              return new Date(d.date).toLocaleString('en-US', {
                                 day: 'numeric',
                                 month: 'long',
                                 year: 'numeric',
+                                timeZone: 'Asia/Singapore',
                               });
                             }),
                         )}
