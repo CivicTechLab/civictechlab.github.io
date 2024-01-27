@@ -19,7 +19,7 @@ const People: Collection = {
       list: true,
       ui: {
         itemProps: (item) => {
-          return { label: item?.name };
+          return { label: item?.isAlumni ? `${item?.name} (Alumni)` : `${item?.name}` };
         },
       },
       fields: [
@@ -37,6 +37,11 @@ const People: Collection = {
           type: 'image',
           label: 'Image',
           name: 'imgSrc',
+        },
+        {
+          type: 'boolean',
+          label: 'Is Alumni',
+          name: 'isAlumni',
         },
         {
           type: 'string',

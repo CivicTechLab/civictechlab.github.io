@@ -39,7 +39,7 @@ This website uses specific file names to display the data. All content files are
 
 **People Page**
 
-- Two files `src/content/people/current.json` and `src/content/people/alumni.json` are required. All other files in this folder are ignored. See `peopleCollection` `src/content/config.ts` for the schema of the file.
+- A file `src/content/people/people.json` is required. All other files in this folder are ignored. See `peopleCollection` `src/content/config.ts` for the schema of the file.
 
 **Projects Page**
 

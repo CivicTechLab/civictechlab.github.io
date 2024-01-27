@@ -4,8 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 import PeopleContent from '../components/react/PeopleContent';
 import client from '../../tina/__generated__/client';
-const currentResponse = await client.queries.people({ relativePath: 'current.json' });
-const alumiResponse = await client.queries.people({ relativePath: 'alumni.json' });
+const response = await client.queries.people({ relativePath: 'people.json' });
 ---
 
 <!doctype html>
@@ -14,9 +13,7 @@ const alumiResponse = await client.queries.people({ relativePath: 'alumni.json' 
     <main class="container">
       <h1 class="text-center">Current Team</h1>
       <div class="row">
-        <PeopleContent client:tina {...currentResponse} />
-        <h2 class="h1 text-center mt-4">Alumni</h2>
-        <PeopleContent client:tina {...alumiResponse} />
+        <PeopleContent client:tina {...response} />
       </div>
     </main>
     <Footer />
