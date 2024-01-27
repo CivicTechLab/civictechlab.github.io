@@ -93,7 +93,7 @@ const NewsList = ({ news }: any) => {
             >
               Tags <span className="badge text-bg-primary rounded-pill">{$tagQuery.length}</span>
             </button>
-            <ul className="dropdown-menu dropdown-menu-end">
+            <ul className="dropdown-menu dropdown-menu-start">
               <ul className="list-group" style={{ width: '200px' }}>
                 <li className="list-group-item" style={{ border: 'none' }}>
                   <button
@@ -125,7 +125,7 @@ const NewsList = ({ news }: any) => {
                         }
                       />
                       <label className="form-check-label" htmlFor={tag.name}>
-                        {tag.name}
+                        <NewsTag tag={tag.name}></NewsTag>
                       </label>
                     </li>
                   );
@@ -176,7 +176,7 @@ const NewsList = ({ news }: any) => {
               <div className="card-body">
                 {n.data.tags &&
                   n.data.tags.map((tag: string) => {
-                    return <NewsTag tag={tag} key={tag}></NewsTag>;
+                    return <NewsTag tag={tag} key={tag} isLink></NewsTag>;
                   })}
                 <a
                   href={`/news/${n.slug}`}
