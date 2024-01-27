@@ -182,7 +182,7 @@ const NewsList = ({ news }: any) => {
                   href={`/news/${n.slug}`}
                   className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
                 >
-                  <h5 className="card-title">{n.data.title}</h5>
+                  <h2 className="h5 card-title">{n.data.title}</h2>
                 </a>
                 <p className="card-subtitle text-body-secondary" style={{ fontSize: '0.875rem' }}>
                   {!n.data.otherDates &&
