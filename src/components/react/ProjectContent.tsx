@@ -61,7 +61,7 @@ const ProjectContent = (props: { query: string; variables: object; data: any }) 
                           key={logo.name || index}
                           href={logo.link}
                           target="_blank"
-                          rel="noopener noreferrer "
+                          rel="noopener noreferrer"
                         >
                           <img
                             src={logo.imgSrc}

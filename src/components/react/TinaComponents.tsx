@@ -38,7 +38,7 @@ const TinaComponents = {
 
     if (props.url.startsWith('http')) {
       return (
-        <a href={props.url} target="_blank" rel="noopener">
+        <a href={props.url} target="_blank" rel="noopener noreferrer">
           {props.children}
         </a>
       );
