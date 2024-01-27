@@ -110,8 +110,24 @@
         "color": "#BE8A60"
       },
       {
+        "name": "FOSS",
+        "color": "#FCD3DE"
+      },
+      {
         "name": "Tools",
         "color": "#003049"
+      },
+      {
+        "name": "Policies",
+        "color": "#CAFFBF"
+      },
+      {
+        "name": "Industry",
+        "color": "#FFEEDD"
+      },
+      {
+        "name": "Online Harm",
+        "color": "#EF476F"
       },
       {
         "name": "Events",
@@ -130,12 +146,12 @@
         "color": "#49475B"
       },
       {
-        "name": "Op-ed",
-        "color": "#496DDB"
+        "name": "Reports",
+        "color": "#343F3E"
       },
       {
-        "name": "FOSS",
-        "color": "#FCD3DE"
+        "name": "Op-ed",
+        "color": "#496DDB"
       },
       {
         "name": "Asia",
