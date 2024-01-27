@@ -1,4 +1,3 @@
-import { Image } from 'astro:assets';
 import React from 'react';
 
 const TinaComponents = {
@@ -44,6 +43,20 @@ const TinaComponents = {
       );
     }
     return <a href={props.url}>{props.children}</a>;
+  },
+  img: (props: any) => {
+    if (!props.url) {
+      return <></>;
+    }
+
+    return (
+      <>
+        <img src={props.url} alt={props.alt || ''}></img>
+        <span className="text-center text-body-tertiary" style={{ fontSize: '0.75rem', opacity: 0.7 }}>
+          {props.caption}
+        </span>
+      </>
+    );
   },
 };
 
