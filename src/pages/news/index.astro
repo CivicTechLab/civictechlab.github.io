@@ -11,6 +11,7 @@ const news = await getCollection('news');
 <Layout title="News">
   <body>
     <main class="container container-base">
+      <h1 class="text-center">What's New</h1>
       <NewsList client:load news={news} />
     </main>
     <Footer />
