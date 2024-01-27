@@ -219,6 +219,7 @@ const NewsList = ({ news }: any) => {
                         formatter.format(
                           [{ date: n.data.dateFrom }]
                             .concat(n.data.otherDates)
+                            .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
                             .map((d: { date: string }, index: number) => {
                               if (
                                 index < n.data.otherDates.length &&

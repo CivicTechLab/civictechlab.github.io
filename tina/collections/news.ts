@@ -27,6 +27,15 @@ const News: Collection = {
       description: 'At least one date must be here. Use this field for a single date or the start of a date range.',
       ui: {
         component: 'date',
+        validate: (value) => {
+          if (!value) {
+            return;
+          }
+
+          if (isNaN(Date.parse(value))) {
+            return 'Invalid date.';
+          }
+        },
       },
     },
     {
@@ -36,6 +45,15 @@ const News: Collection = {
       description: 'Use this field for the end of the date range.',
       ui: {
         component: 'date',
+        validate: (value) => {
+          if (!value) {
+            return;
+          }
+
+          if (isNaN(Date.parse(value))) {
+            return 'Invalid date.';
+          }
+        },
       },
     },
     {
@@ -44,6 +62,20 @@ const News: Collection = {
       name: 'otherDates',
       label: 'Other Dates',
       description: 'Use this field for events on separate dates.',
+      ui: {
+        itemProps: (item) => {
+          return {
+            label:
+              item?.date &&
+              new Date(item?.date).toLocaleString('en-US', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                timeZone: 'Asia/Singapore',
+              }),
+          };
+        },
+      },
       fields: [
         {
           type: 'string',
@@ -52,6 +84,15 @@ const News: Collection = {
           description: 'Another date the event is held on.',
           ui: {
             component: 'date',
+            validate: (value) => {
+              if (!value) {
+                return;
+              }
+
+              if (isNaN(Date.parse(value))) {
+                return 'Invalid date.';
+              }
+            },
           },
         },
       ],

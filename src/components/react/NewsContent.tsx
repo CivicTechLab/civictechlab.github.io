@@ -24,24 +24,27 @@ const NewsContent = (props: { query: string; variables: object; data: any }) => 
           ` - ${new Date(dateTo).toLocaleString('en-US', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Singapore' })}`}
         {otherDates &&
           formatter.format(
-            [{ date: dateFrom }].concat(otherDates).map((d: { date: string }, index: number) => {
-              if (
-                index < otherDates.length &&
-                new Date(otherDates[index].date).getFullYear() === new Date(d.date).getFullYear()
-              ) {
+            [{ date: dateFrom }]
+              .concat(otherDates)
+              .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+              .map((d: { date: string }, index: number) => {
+                if (
+                  index < otherDates.length &&
+                  new Date(otherDates[index].date).getFullYear() === new Date(d.date).getFullYear()
+                ) {
+                  return new Date(d.date).toLocaleString('en-US', {
+                    day: 'numeric',
+                    month: 'long',
+                    timeZone: 'Asia/Singapore',
+                  });
+                }
                 return new Date(d.date).toLocaleString('en-US', {
                   day: 'numeric',
                   month: 'long',
+                  year: 'numeric',
                   timeZone: 'Asia/Singapore',
                 });
-              }
-              return new Date(d.date).toLocaleString('en-US', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric',
-                timeZone: 'Asia/Singapore',
-              });
-            }),
+              }),
           )}
       </p>
 
