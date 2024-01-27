@@ -181,10 +181,10 @@ const NewsList = ({ news }: any) => {
           <div className="mx-auto mt-2">
             {searchQuery && (
               <p>
-                Searching '<b>{searchQuery}</b>'
+                Searching '<b>{searchQuery}</b>'.
               </p>
             )}
-            {newsToShow.length === 0 && <p>No news found.</p>}
+            {newsToShow.length === 0 ? <p>No articles found.</p> : <p>{newsToShow.length} articles found.</p>}
           </div>
           {newsToShow.map((n: NewsProps) => {
             return (

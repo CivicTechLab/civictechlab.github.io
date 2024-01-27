@@ -11,12 +11,11 @@ const NewsTag = ({ tag, isLink = false, setTag = false }: { tag: string; isLink?
     };
   }, {});
 
+  const styles = `${tinycolor(tagToColor[tag]).isDark() ? 'link-light' : 'link-dark'} badge mb-1 me-1 rounded-pill`;
+
   if (!isLink && !setTag) {
     return (
-      <span
-        className={`${tinycolor(tagToColor[tag]).isDark() ? 'link-light' : 'link-dark'} badge mb-1 me-1`}
-        style={{ backgroundColor: `${tagToColor[tag]}` }}
-      >
+      <span className={styles} style={{ backgroundColor: `${tagToColor[tag]}` }}>
         {tag}
       </span>
     );
@@ -25,7 +24,7 @@ const NewsTag = ({ tag, isLink = false, setTag = false }: { tag: string; isLink?
   if (!isLink && setTag) {
     return (
       <span
-        className={`${tinycolor(tagToColor[tag]).isDark() ? 'link-light' : 'link-dark'} badge mb-1 me-1`}
+        className={styles}
         style={{ backgroundColor: `${tagToColor[tag]}`, cursor: 'pointer' }}
         onClick={() => tagQuery.set([tag])}
       >
@@ -36,11 +35,7 @@ const NewsTag = ({ tag, isLink = false, setTag = false }: { tag: string; isLink?
 
   if (isLink && !setTag) {
     return (
-      <a
-        href={'/news'}
-        className={`btn ${tinycolor(tagToColor[tag]).isDark() ? 'link-light' : 'link-dark'} badge mb-1 me-1`}
-        style={{ backgroundColor: `${tagToColor[tag]}` }}
-      >
+      <a href={'/news'} className={`btn ${styles}`} style={{ backgroundColor: `${tagToColor[tag]}` }}>
         {tag}
       </a>
     );
@@ -49,7 +44,7 @@ const NewsTag = ({ tag, isLink = false, setTag = false }: { tag: string; isLink?
   return (
     <a
       href={'/news'}
-      className={`btn ${tinycolor(tagToColor[tag]).isDark() ? 'link-light' : 'link-dark'} badge mb-1 me-1`}
+      className={`btn ${styles}`}
       style={{ backgroundColor: `${tagToColor[tag]}` }}
       onClick={() => tagQuery.set([tag])}
     >
