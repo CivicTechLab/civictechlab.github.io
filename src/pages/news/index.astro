@@ -11,7 +11,7 @@ const news = await getCollection('news');
 <Layout title="News">
   <body>
     <main class="container container-base">
-      <NewsList client:only="react" news={news} />
+      <NewsList client:load news={news} />
     </main>
     <Footer />
   </body>
