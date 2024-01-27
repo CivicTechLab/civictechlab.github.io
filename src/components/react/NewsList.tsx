@@ -22,7 +22,6 @@ const NewsList = ({ news }: any) => {
   const $tagQuery = useStore(tagQuery);
   const [sortOrder, setSortOrder] = useState<'latest' | 'earliest'>('latest');
   const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
-  console.log(news);
 
   const sorters = {
     latest: (a: NewsProps, b: NewsProps) => {

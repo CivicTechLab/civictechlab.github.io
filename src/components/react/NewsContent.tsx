@@ -8,7 +8,6 @@ const NewsContent = (props: { query: string; variables: object; data: any }) => 
   const { data } = useTina(props);
   const { title, body, dateFrom, dateTo, otherDates, tags } = data.news;
   const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
-  console.log(otherDates);
   return (
     <>
       <h1 data-tina-field={tinaField(data.news, 'title')} className="text-center">

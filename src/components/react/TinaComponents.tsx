@@ -30,6 +30,20 @@ const TinaComponents = {
 
     return <video className="mx-auto d-block w-100" src={`/videos/${src}`} controls></video>;
   },
+  a: (props: any) => {
+    if (!props.url) {
+      return <></>;
+    }
+
+    if (props.url.startsWith('http')) {
+      return (
+        <a href={props.url} target="_blank" rel="noopener">
+          {props.children}
+        </a>
+      );
+    }
+    return <a href={props.url}>{props.children}</a>;
+  },
 };
 
 export default TinaComponents;
