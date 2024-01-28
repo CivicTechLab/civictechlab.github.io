@@ -1,12 +1,11 @@
 import React from 'react';
 import { tinaField, useTina } from 'tinacms/dist/react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
-import NewsTag from './NewsTag';
 import TinaComponents from './TinaComponents';
 
 const NewsContent = (props: { query: string; variables: object; data: any }) => {
   const { data } = useTina(props);
-  const { title, body, dateFrom, dateTo, otherDates, tags } = data.news;
+  const { title, body, dateFrom, dateTo, otherDates } = data.news;
   const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
   return (
     <>
@@ -51,13 +50,6 @@ const NewsContent = (props: { query: string; variables: object; data: any }) => 
       <div data-tina-field={tinaField(data.news, 'body')}>
         <TinaMarkdown components={TinaComponents} content={body}></TinaMarkdown>
       </div>
-      {(!tags || tags.length !== 0) && <hr></hr>}
-      {tags &&
-        tags.map((tag: string) => (
-          <span data-tina-field={tinaField(data.news, 'tags')} key={tag}>
-            <NewsTag isLink setTag tag={tag}></NewsTag>
-          </span>
-        ))}
     </>
   );
 };

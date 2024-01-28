@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import client from '../../../tina/__generated__/client';
 import Footer from '../../components/Footer.astro';
 import NewsContent from '../../components/react/NewsContent';
+import NewsContentFooter from '../../components/react/NewsContentFooter';
 
 export async function getStaticPaths() {
   const news = await getCollection('news');
@@ -21,7 +22,8 @@ const response = await client.queries.news({ relativePath: `${news.id}` });
 <Layout title={news.data.title}>
   <body>
     <main class="container container-base prose">
-      <NewsContent client:load {...response} />
+      <NewsContent client:tina {...response} />
+      <NewsContentFooter client:load {...response} />
     </main>
     <Footer />
   </body>
