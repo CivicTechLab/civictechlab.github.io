@@ -1,20 +1,20 @@
 import type { Collection } from 'tinacms';
 
-const People: Collection = {
-  name: 'people',
-  label: 'People',
+const Team: Collection = {
+  name: 'team',
+  label: 'Team',
   format: 'json',
-  path: 'src/content/people',
+  path: 'src/content/team',
   ui: {
     router: () => {
-      return '/people';
+      return '/team';
     },
   },
   fields: [
     {
       type: 'object',
-      name: 'people',
-      label: 'People',
+      name: 'team',
+      label: 'Team',
       description: 'Drag to reorder the order of appearance on the page.',
       list: true,
       ui: {
@@ -63,4 +63,4 @@ const People: Collection = {
   ],
 };
 
-export default People;
+export default Team;

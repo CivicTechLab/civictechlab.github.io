@@ -1,12 +1,12 @@
 import React from 'react';
 import { tinaField, useTina } from 'tinacms/dist/react';
 
-const PeopleContent = (props: { query: string; variables: object; data: any }) => {
+const TeamContent = (props: { query: string; variables: object; data: any }) => {
   const { data } = useTina(props);
-  const { people: peopleData } = data.people;
+  const { team: teamData } = data.team;
   return (
     <>
-      {peopleData
+      {teamData
         .filter((p: any) => !p.isAlumni)
         .map((p: any) => {
           return (
@@ -29,7 +29,7 @@ const PeopleContent = (props: { query: string; variables: object; data: any }) =
           );
         })}
       <h2 className="h1 text-center mt-4 w-100">Alumni</h2>
-      {peopleData
+      {teamData
         .filter((p: any) => p.isAlumni)
         .map((p: any) => {
           return (
@@ -55,4 +55,4 @@ const PeopleContent = (props: { query: string; variables: object; data: any }) =
   );
 };
 
-export default PeopleContent;
+export default TeamContent;

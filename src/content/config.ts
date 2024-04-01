@@ -61,10 +61,10 @@ const homeCollection = defineCollection({
   }),
 });
 
-const peopleCollection = defineCollection({
+const teamCollection = defineCollection({
   type: 'data',
   schema: z.object({
-    people: z.array(
+    team: z.array(
       z.object({
         name: z.string().optional(),
         description: z.string().optional(),
@@ -139,7 +139,7 @@ export const collections = {
   news: newsCollection,
   home: homeCollection,
   projects: projectsCollection,
-  people: peopleCollection,
+  team: teamCollection,
   joinus: joinUsCollection,
   global: globalCollection,
 };

@@ -6,8 +6,8 @@
         "href": "/"
       },
       {
-        "label": "People",
-        "href": "/people"
+        "label": "Team",
+        "href": "/team"
       },
       {
         "label": "Projects",
@@ -41,8 +41,8 @@
           "href": "/"
         },
         {
-          "label": "People",
-          "href": "/people"
+          "label": "Team",
+          "href": "/team"
         },
         {
           "label": "Projects",

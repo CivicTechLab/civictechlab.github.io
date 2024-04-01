@@ -37,9 +37,9 @@ This website uses specific file names to display the data. All content files are
 
 - A file, `src/content/home/home.json` is required, all other files in this folder are ignored. See `homeCollection` in `src/content/config.ts` for the schema of the file.
 
-**People Page**
+**Team Page**
 
-- A file `src/content/people/people.json` is required. All other files in this folder are ignored. See `peopleCollection` `src/content/config.ts` for the schema of the file.
+- A file `src/content/team/team.json` is required. All other files in this folder are ignored. See `teamCollection` `src/content/config.ts` for the schema of the file.
 
 **Projects Page**
 

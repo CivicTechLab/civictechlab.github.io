@@ -1,6 +1,6 @@
 import { defineConfig } from 'tinacms';
 import Home from './collections/home';
-import People from './collections/people';
+import Team from './collections/team';
 import Projects from './collections/projects';
 import Global from './collections/global';
 import JoinUs from './collections/joinus';
@@ -33,6 +33,6 @@ export default defineConfig({
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
-    collections: [Home, People, Projects, JoinUs, News, Global],
+    collections: [Home, Team, Projects, JoinUs, News, Global],
   },
 });

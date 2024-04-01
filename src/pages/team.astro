@@ -2,18 +2,18 @@
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 
-import PeopleContent from '../components/react/PeopleContent';
+import TeamContent from '../components/react/TeamContent';
 import client from '../../tina/__generated__/client';
-const response = await client.queries.people({ relativePath: 'people.json' });
+const response = await client.queries.team({ relativePath: 'team.json' });
 ---
 
 <!doctype html>
-<Layout title="People">
+<Layout title="Team">
   <body>
     <main class="container">
       <h1 class="text-center">Current Team</h1>
       <div class="row">
-        <PeopleContent client:tina {...response} />
+        <TeamContent client:tina {...response} />
       </div>
     </main>
     <Footer />
