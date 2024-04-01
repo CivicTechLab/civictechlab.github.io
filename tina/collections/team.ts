@@ -1,4 +1,4 @@
-import type { Collection } from 'tinacms';
+import { TextArea, type Collection } from 'tinacms';
 
 const Team: Collection = {
   name: 'team',
@@ -32,6 +32,9 @@ const Team: Collection = {
           type: 'string',
           label: 'Description',
           name: 'description',
+          ui: {
+            component: 'textarea',
+          },
         },
         {
           type: 'image',

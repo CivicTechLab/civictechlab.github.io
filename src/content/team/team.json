@@ -33,6 +33,18 @@
       "website": "https://www.lesterong.com"
     },
     {
+      "name": "Huazhi Qin",
+      "description": "Research Assistant, PhD student, Sociology",
+      "imgSrc": "/team/huazhi-qin.png",
+      "status": "Current"
+    },
+    {
+      "name": "Jing Li",
+      "description": "Visiting Scholar, Associate professor, Journalism Institution, Shanghai Social Science Academy, ANT & Social Critical Theory Studies.",
+      "imgSrc": "/team/jing-li.png",
+      "status": "Current"
+    },
+    {
       "name": "Charlene Chan Mun Yee",
       "description": "Research Assistant, Undergrad Student, NUS Data science and Analytics",
       "imgSrc": "/team/charlene.png",
@@ -69,12 +81,6 @@
       "description": "Research Intern, Master graduate, City University of Hong Kong",
       "imgSrc": "/team/haodong-liu.png",
       "status": "Alumni"
-    },
-    {
-      "name": "Huazhi Qin",
-      "description": "Research Intern, Master graduate, Georgetown University",
-      "imgSrc": "/team/huazhi-qin.png",
-      "status": "Current"
     },
     {
       "name": "Tong Tong",
