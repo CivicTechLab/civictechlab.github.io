@@ -11,10 +11,7 @@ const response = await client.queries.team({ relativePath: 'team.json' });
 <Layout title="Team">
   <body>
     <main class="container">
-      <h1 class="text-center">Current Team</h1>
-      <div class="row">
-        <TeamContent client:tina {...response} />
-      </div>
+      <TeamContent client:tina {...response} />
     </main>
     <Footer />
   </body>

@@ -70,7 +70,7 @@ const teamCollection = defineCollection({
         description: z.string().optional(),
         imgSrc: z.string().optional(),
         website: z.string().url().optional(),
-        isAlumni: z.boolean().optional(),
+        status: z.string().optional(),
       }),
     ),
   }),

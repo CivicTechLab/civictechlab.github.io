@@ -4,182 +4,188 @@
       "name": "Dr. Weiyu Zhang",
       "description": "Founder & Director; currently Professor, Department of Communications and New Media, National University of Singapore",
       "imgSrc": "/team/weiyu-zhang.png",
+      "status": "Director",
       "website": "http://www.weiyuzhang.net/"
     },
     {
       "name": "Jingyi Xie",
       "description": "Master by Research student",
-      "imgSrc": "/team/jingyi-xie.png"
+      "imgSrc": "/team/jingyi-xie.png",
+      "status": "Current"
     },
     {
       "name": "Ken Tan",
       "description": "Master By Research student",
-      "imgSrc": "/team/ken-tan.png"
+      "imgSrc": "/team/ken-tan.png",
+      "status": "Current"
     },
     {
       "name": "Gina Fu",
       "description": "Research Assistant, PhD student",
-      "imgSrc": "/team/gina-fu.png"
+      "imgSrc": "/team/gina-fu.png",
+      "status": "Current"
     },
     {
       "name": "Kyria Lee Jia Zhen",
       "description": "Research Assistant, Undergrad Student, NUS Business Analytics",
-      "imgSrc": "/team/kyria-lee.png"
+      "imgSrc": "/team/kyria-lee.png",
+      "status": "Current"
     },
     {
       "name": "Ong Pei Cong Lester",
       "description": "Research Assistant, Undergrad Student, NUS Computer Science",
       "imgSrc": "/team/lester-ong.png",
+      "status": "Current",
       "website": "https://www.lesterong.com"
     },
     {
       "name": "Charlene Chan Mun Yee",
       "description": "Research Assistant, Undergrad Student, NUS Data science and Analytics",
       "imgSrc": "/team/charlene.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://www.linkedin.com/in/charlene-chan-00/"
     },
     {
       "name": "Tan Si Min, Odele",
       "description": "Research Assistant, Undergrad Student, Urban Studies",
       "imgSrc": "/team/odele-tan.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://readymag.com/odele/portfolio/"
     },
     {
       "name": "Wenli Hu",
       "description": "Research Intern, Master graduate, Hong Kong Baptist University",
-      "isAlumni": true,
-      "imgSrc": "/team/wenli-hu.png"
+      "imgSrc": "/team/wenli-hu.png",
+      "status": "Alumni"
     },
     {
       "name": "Dong Wang",
       "description": "Visiting PhD Student, University of Science and Technology of China",
-      "isAlumni": true,
-      "imgSrc": "/team/dong-wang.png"
+      "imgSrc": "/team/dong-wang.png",
+      "status": "Alumni"
     },
     {
       "name": "Jason, Chin Seang Ng",
       "description": "Research Assistant, undergrad student, Mathematics, NUS",
-      "isAlumni": true,
-      "imgSrc": "/team/jason-chin.png"
+      "imgSrc": "/team/jason-chin.png",
+      "status": "Alumni"
     },
     {
       "name": "Haodong Liu",
       "description": "Research Intern, Master graduate, City University of Hong Kong",
-      "isAlumni": true,
-      "imgSrc": "/team/haodong-liu.png"
+      "imgSrc": "/team/haodong-liu.png",
+      "status": "Alumni"
     },
     {
       "name": "Huazhi Qin",
       "description": "Research Intern, Master graduate, Georgetown University",
-      "isAlumni": true,
-      "imgSrc": "/team/huazhi-qin.png"
+      "imgSrc": "/team/huazhi-qin.png",
+      "status": "Alumni"
     },
     {
       "name": "Tong Tong",
       "description": "Visiting PhD Student, Tsinghua University",
-      "isAlumni": true,
-      "imgSrc": "/team/tong-tong.png"
+      "imgSrc": "/team/tong-tong.png",
+      "status": "Alumni"
     },
     {
       "name": "Zhuo Chen",
       "description": "PhD Graduate, 2022; Assistant Professor, HSBC Business School, Peking University",
-      "isAlumni": true,
-      "imgSrc": "/team/zhuo-chen.png"
+      "imgSrc": "/team/zhuo-chen.png",
+      "status": "Alumni"
     },
     {
       "name": "Yipeng Xi",
       "description": "PhD Graduate 2022; Assistant Professor, Shanghai Jiaotong University",
-      "isAlumni": true,
-      "imgSrc": "/team/yipeng-xi.png"
+      "imgSrc": "/team/yipeng-xi.png",
+      "status": "Alumni"
     },
     {
       "name": "Manjiang He",
       "description": "Research Assistant, Master student, LKYSPP, NUS",
       "imgSrc": "/team/manjiang-he.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://www.linkedin.com/in/manjianghe/"
     },
     {
       "name": "Nuriyah Fatin",
       "description": "Research Assistant 2021-2022, undergrad student, CNM, NUS",
       "imgSrc": "/team/nuriyah-fatin.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://nuriyahfatin.wixsite.com/website"
     },
     {
       "name": "Dr. Anfan Chen",
       "description": "Visiting PhD Student, Tsinghua University, 2019; currently PostDoc Researcher at Chinese University of Hong Kong (CUHK)",
       "imgSrc": "/team/anfan-chen.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://www.researchgate.net/profile/Anfan-Chen"
     },
     {
       "name": "Ximing Liu",
       "description": "Master Graduate, 2019; currently Market Researcher at Tencent",
       "imgSrc": "/team/ximing-liu.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://www.linkedin.com/in/ximing-liu-951543b8/?originalSubdomain=cn"
     },
     {
       "name": "Dr. Sanju Menon",
       "description": "PhD Graduate, 2018; currently Data Scientist (Cognitive Automation) at UBS",
       "imgSrc": "/team/sanju-menon.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://www.linkedin.com/in/sanjumenonp/"
     },
     {
       "name": "Jingjing Liang",
       "description": "Master Graduate, 2018; currently at Tencent",
-      "isAlumni": true,
-      "imgSrc": "/team/jingjing-liang.png"
+      "imgSrc": "/team/jingjing-liang.png",
+      "status": "Alumni"
     },
     {
       "name": "Tian Yang",
       "description": "Master Graduate, 2017; currently doctoral candidate at University of Pennsylvania",
       "imgSrc": "/team/tian-yang.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://www.asc.upenn.edu/team/graduate-student/tian-yang"
     },
     {
       "name": "Dr. Gulizar Haciyakupoglu ",
       "description": "PhD Graduate, 2016; currently Research Fellow at Nanyang Technological University",
       "imgSrc": "/team/gulizar.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://www.rsis.edu.sg/profile/gulizar-haciyakupoglu/"
     },
     {
       "name": "Lize Zhang",
       "description": "Master Graduate, 2016; currently Founder of Peach Says ",
-      "isAlumni": true,
-      "imgSrc": "/team/lize-zhang.png"
+      "imgSrc": "/team/lize-zhang.png",
+      "status": "Alumni"
     },
     {
       "name": "Dr. Simon Perrault",
       "description": "Postdoc Researcher, 2014-2015; currently Assistant Professor, Singapore University of Science and Technology",
       "imgSrc": "/team/simon-perrault.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://istd.sutd.edu.sg/team/faculty/simon-perrault#biography"
     },
     {
       "name": "Jodie Luu",
       "description": "Master Graduate, 2013; currently Lecturer at National University of Singapore",
       "imgSrc": "/team/jodie-luu.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://www.nus.edu.sg/celc/staff/jodieluu.html"
     },
     {
       "name": "Catherine Candano",
       "description": "Master Graduate, 2012; currently Head, Strategic Data Partnerships Development, Google Asia Pacific",
-      "isAlumni": true,
-      "imgSrc": "/team/catherine-candano.png"
+      "imgSrc": "/team/catherine-candano.png",
+      "status": "Alumni"
     },
     {
       "name": "Lingzi Zhang",
       "description": "Master Graduate, 2012; currently Product Director at Ola Chat",
       "imgSrc": "/team/lingzi-zhang.png",
-      "isAlumni": true,
+      "status": "Alumni",
       "website": "https://www.linkedin.com/in/lizziezhang/"
     }
   ]

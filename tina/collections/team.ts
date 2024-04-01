@@ -19,7 +19,7 @@ const Team: Collection = {
       list: true,
       ui: {
         itemProps: (item) => {
-          return { label: item?.isAlumni ? `${item?.name} (Alumni)` : `${item?.name}` };
+          return { label: `${item?.name} (${item?.status})` };
         },
       },
       fields: [
@@ -39,9 +39,10 @@ const Team: Collection = {
           name: 'imgSrc',
         },
         {
-          type: 'boolean',
-          label: 'Is Alumni',
-          name: 'isAlumni',
+          type: 'string',
+          label: 'Status',
+          name: 'status',
+          options: ['Director', 'Current', 'Alumni'],
         },
         {
           type: 'string',
