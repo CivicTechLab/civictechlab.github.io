@@ -41,6 +41,12 @@ const Home: Collection = {
           label: 'Image',
           name: 'imgSrc',
         },
+        {
+          type: 'rich-text',
+          label: 'Caption',
+          name: 'caption',
+          description: 'Displays a caption below the image.',
+        },
       ],
     },
   ],

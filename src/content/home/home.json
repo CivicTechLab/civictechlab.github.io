@@ -3,22 +3,26 @@
     {
       "title": "OUR VISION",
       "description": "An interdisciplinary, cross-sectoral and collaborative approach to tackling civic challenges.",
-      "imgSrc": "/home/vision.jpeg"
+      "imgSrc": "/home/vision.jpeg",
+      "caption": "Photo by [Bud Helisson](https://unsplash.com/@budhelisson?utm_content=creditCopyText\\&utm_medium=referral\\&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-holding-brown-eyeglasses-with-green-trees-background-kqguzgvYrtM?utm_content=creditCopyText\\&utm_medium=referral\\&utm_source=unsplash)\n"
     },
     {
       "title": "OUR MISSION",
       "description": "Generate the highest quality research about Civic Technology. Strengthen the civic core of public-sector, private-sector actors and citizens. Design critically processes and technologies for the public good.",
-      "imgSrc": "/home/mission.jpeg"
+      "imgSrc": "/home/mission.jpeg",
+      "caption": "Photo by [Alex Shute](https://unsplash.com/@faithgiant?utm_content=creditCopyText\\&utm_medium=referral\\&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-scrabble-type-block-spelling-the-word-miss-sits-next-to-a-bouquet-eVhVt7YcMfM?utm_content=creditCopyText\\&utm_medium=referral\\&utm_source=unsplash)\n"
     },
     {
       "title": "OUR TEAM",
       "description": "CivicTech Lab at National University of Singapore is a research hub led by Dr. Weiyu Zhang. We are a team of social scientists, computer scientists, and digital cultural analysts.",
-      "imgSrc": "/home/team.jpeg"
+      "imgSrc": "/home/team.jpeg",
+      "caption": "Photo by [Annie Spratt](https://unsplash.com/@anniespratt?utm_content=creditCopyText\\&utm_medium=referral\\&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/group-of-people-using-laptop-computer-QckxruozjRg?utm_content=creditCopyText\\&utm_medium=referral\\&utm_source=unsplash) \n"
     },
     {
       "title": "OUR HISTORY",
       "description": "The CivicTech Lab (formerly the Media Psychology Lab) was established in 2008 by Dr. Weiyu Zhang, as a central location for research projects on civic engagement and information communication technology conducted by the team.",
-      "imgSrc": "/home/history.jpeg"
+      "imgSrc": "/home/history.jpeg",
+      "caption": "Photo by [Markus Winkler](https://unsplash.com/@markuswinkler?utm_content=creditCopyText\\&utm_medium=referral\\&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/white-and-black-train-toy-H8SQHzxVk-A?utm_content=creditCopyText\\&utm_medium=referral\\&utm_source=unsplash)  \n"
     }
   ]
 }
