@@ -1,7 +1,8 @@
 {
   "title": "Citizen Science",
-  "heroImgSrc": "/citizen-science/hero.png",
   "description": "This research program focuses on enabling public participation in science and technology topics.",
+  "heroImgSrc": "/citizen-science/hero.png",
+  "caption": "",
   "content": "Science and Technology topics (e.g., pandemics, climate change, gene editing, artificial intelligence) have increasingly becoming the focus of public discussion. Public understanding of science and technology is the foundation of the governance of these history-changing actants. Without the publics' buy-in, we cannot harvest the fruits of scientific breakthroughs (e.g., vaccine take-up). Without the public’s support, we won't be able to reverse the climate change human development has induced. Without the public's debate, we won’t know that there are limits the mankind must set to their own imagination (e.g., gene editing). Without the public’s thought evolvement, we cannot justify the decisions on technological development made by experts (e.g., artificial intelligence).\n",
   "sections": [
     {
@@ -32,6 +33,11 @@
           "name": "NUS Chemistry",
           "imgSrc": "/citizen-science/nus-chemistry.png",
           "link": "https://chemistry.nus.edu.sg/"
+        },
+        {
+          "name": "NUS Food Science",
+          "imgSrc": "/citizen-science/nus-fst.png",
+          "link": "https://www.fst.nus.edu.sg/"
         }
       ],
       "_template": "partnerInstitutions"
