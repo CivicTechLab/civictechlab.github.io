@@ -1,29 +1,29 @@
 ---
+import { getCollection } from 'astro:content';
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
-import Logo from '../assets/logo.gif';
-
 import client from '../../tina/__generated__/client';
 import HomeContent from '../components/react/HomeContent';
+import NewsItem from '../components/react/NewsItem';
+import { sorters } from '../utils';
 const response = await client.queries.home({ relativePath: 'home.json' });
+
+const news = await getCollection('news');
+const newsToShow = news.sort(sorters['latest']).slice(0, 5);
 ---
 
 <!doctype html>
 <Layout title="Home">
   <body>
     <main class="container container-base">
-      <div class="d-flex justify-content-center mb-4">
-        <img height="504" width="896" class="rounded mw-100" src={Logo.src} alt="CivicTech Lab" />
-      </div>
       <HomeContent client:tina {...response} />
+      <h2 class="mt-4">Latest News</h2>
+      {
+        newsToShow.map((n: any) => {
+          return <NewsItem client:load news={n} isLink />;
+        })
+      }
     </main>
     <Footer />
   </body>
 </Layout>
-<style>
-  img[alt='CivicTech Lab'] {
-    height: auto;
-    width: auto;
-    max-height: 348px;
-  }
-</style>
