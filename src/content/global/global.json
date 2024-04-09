@@ -210,5 +210,9 @@
         "color": "#904E55"
       }
     ]
+  },
+  "latestNews": {
+    "numLatest": 5,
+    "bgImgSrc": "/cultural-publics/cultural-publics-hero.png"
   }
 }

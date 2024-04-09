@@ -5,7 +5,7 @@ import TinaComponents from './TinaComponents';
 
 const NewsContent = (props: { query: string; variables: object; data: any }) => {
   const { data } = useTina(props);
-  const { title, body, dateFrom, dateTo, otherDates } = data.news;
+  const { title, body, dateFrom, dateTo, otherDates, heroImgSrc } = data.news;
   const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
   return (
     <>
@@ -47,6 +47,11 @@ const NewsContent = (props: { query: string; variables: object; data: any }) => 
           )}
       </p>
 
+      {heroImgSrc && (
+        <p>
+          <img data-tina-field={tinaField(data.news, 'heroImgSrc')} src={heroImgSrc} alt="" />
+        </p>
+      )}
       <div data-tina-field={tinaField(data.news, 'body')}>
         <TinaMarkdown components={TinaComponents} content={body}></TinaMarkdown>
       </div>

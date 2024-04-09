@@ -116,7 +116,7 @@ const NewsList = ({ news }: any) => {
         {newsToShow.length === 0 ? <p>No articles found.</p> : <p>{newsToShow.length} articles found.</p>}
       </div>
       {newsToShow.map((n: NewsProps) => {
-        return <NewsItem news={n}></NewsItem>;
+        return <NewsItem news={n} key={n.slug}></NewsItem>;
       })}
     </>
   );

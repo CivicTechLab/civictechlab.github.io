@@ -4,6 +4,7 @@ const newsCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string().optional(),
+    heroImgSrc: z.string().optional(),
     dateFrom: z.string().optional(),
     dateTo: z.string().optional(),
     otherDates: z

@@ -106,6 +106,12 @@ const News: Collection = {
       description: 'Tags are displayed in the order they are selected.',
     },
     {
+      type: 'image',
+      label: 'Hero Image',
+      name: 'heroImgSrc',
+      description: 'Displays an image below the title.',
+    },
+    {
       type: 'rich-text',
       label: 'Body',
       name: 'body',

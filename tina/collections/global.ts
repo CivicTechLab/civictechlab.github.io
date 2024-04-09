@@ -183,6 +183,32 @@ const Global: Collection = {
         },
       ],
     },
+    {
+      label: 'Latest News',
+      name: 'latestNews',
+      type: 'object',
+      description: 'Set the number of news articles shown on the home page, and the default background image.',
+      fields: [
+        {
+          type: 'number',
+          name: 'numLatest',
+          label: 'Maximum number of latest news to display.',
+          ui: {
+            validate: (value) => {
+              if (value < 1) {
+                return 'There should be at least 1 latest news article to display.';
+              }
+            },
+          },
+        },
+        {
+          type: 'image',
+          name: 'bgImgSrc',
+          label: 'Background image',
+          description: 'The default image for news without a hero image.',
+        },
+      ],
+    },
   ],
 };
 

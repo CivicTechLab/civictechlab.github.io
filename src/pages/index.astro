@@ -4,12 +4,14 @@ import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 import client from '../../tina/__generated__/client';
 import HomeContent from '../components/react/HomeContent';
-import NewsItem from '../components/react/NewsItem';
+import Global from '../content/global/global.json';
 import { sorters } from '../utils';
+import NewsDate from '../components/react/NewsDate';
 const response = await client.queries.home({ relativePath: 'home.json' });
 
+const numOfNewsToShow = Global.latestNews.numLatest < 1 ? 1 : Global.latestNews.numLatest;
 const news = await getCollection('news');
-const newsToShow = news.sort(sorters['latest']).slice(0, 5);
+const newsToShow = news.sort(sorters['latest']).slice(0, numOfNewsToShow);
 ---
 
 <!doctype html>
@@ -18,11 +20,67 @@ const newsToShow = news.sort(sorters['latest']).slice(0, 5);
     <main class="container container-base">
       <HomeContent client:tina {...response} />
       <h2 class="mt-4">Latest News</h2>
-      {
-        newsToShow.map((n: any) => {
-          return <NewsItem client:load news={n} isLink />;
-        })
-      }
+      <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+        {
+          numOfNewsToShow > 1 && (
+            <div class="carousel-indicators">
+              {newsToShow.map((_, index: number) => {
+                return (
+                  <button
+                    type="button"
+                    data-bs-target="#newsCarousel"
+                    data-bs-slide-to={index}
+                    class={index === 0 ? 'active' : ''}
+                    aria-current={index === 0 ? 'true' : 'false'}
+                    aria-label={`Slide ${index + 1}`}
+                  />
+                );
+              })}
+            </div>
+          )
+        }
+        <div class="carousel-inner">
+          {
+            newsToShow.map((n: any, index: number) => {
+              return (
+                <div class={`carousel-item bg-dark ${index === 0 ? 'active' : ''}`} style="height: 408px;">
+                  {n.data.heroImgSrc ? (
+                    <img
+                      src={n.data.heroImgSrc}
+                      class="d-block mx-auto opacity-50"
+                      alt=""
+                      style="max-height: 100%; max-width: 100%"
+                    />
+                  ) : (
+                    <img
+                      src={Global.latestNews.bgImgSrc}
+                      alt=""
+                      class="d-block mx-auto opacity-50 object-fit-cover h-100 w-100"
+                    />
+                  )}
+                  <div class="carousel-caption d-block">
+                    <a
+                      href={`news/${n.slug}`}
+                      class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                    >
+                      <h5>{n.data.title}</h5>
+                    </a>
+                    <NewsDate news={n} client:load />
+                  </div>
+                </div>
+              );
+            })
+          }
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </main>
     <Footer />
   </body>
