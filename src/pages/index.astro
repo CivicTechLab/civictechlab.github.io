@@ -63,7 +63,7 @@ const newsToShow = news.sort(sorters['latest']).slice(0, numOfNewsToShow);
                       href={`news/${n.slug}`}
                       class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
                     >
-                      <h5>{n.data.title}</h5>
+                      <h6>{n.data.title}</h6>
                     </a>
                     <NewsDate news={n} client:load />
                   </div>
@@ -104,7 +104,7 @@ const newsToShow = news.sort(sorters['latest']).slice(0, numOfNewsToShow);
 
   @media screen and (max-width: 566px) {
     .carousel-item {
-      height: calc(100vw / 16 * 9);
+      height: calc((100vw - 1.5rem) / 16 * 9);
     }
   }
 </style>
