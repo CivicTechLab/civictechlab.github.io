@@ -43,13 +43,13 @@ const newsToShow = news.sort(sorters['latest']).slice(0, numOfNewsToShow);
           {
             newsToShow.map((n: any, index: number) => {
               return (
-                <div class={`carousel-item bg-dark ${index === 0 ? 'active' : ''}`} style="height: 408px;">
+                <div class={`carousel-item bg-dark ${index === 0 ? 'active' : ''}`}>
                   {n.data.heroImgSrc ? (
                     <img
                       src={n.data.heroImgSrc}
                       class="d-block mx-auto opacity-50"
                       alt=""
-                      style="max-height: 100%; max-width: 100%"
+                      style="object-fit: contain; max-height: 100%; height: auto; width: 100%"
                     />
                   ) : (
                     <img
@@ -85,3 +85,26 @@ const newsToShow = news.sort(sorters['latest']).slice(0, numOfNewsToShow);
     <Footer />
   </body>
 </Layout>
+<style>
+  .carousel-item {
+    height: 450px;
+  }
+
+  @media screen and (max-width: 991px) {
+    .carousel-item {
+      height: 391px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .carousel-item {
+      height: 290px;
+    }
+  }
+
+  @media screen and (max-width: 566px) {
+    .carousel-item {
+      height: calc(100vw / 16 * 9);
+    }
+  }
+</style>
