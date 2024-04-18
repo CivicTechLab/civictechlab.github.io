@@ -6,7 +6,7 @@ This website is developed using Astro + React + Bootstrap + TinaCMS.
 
 TinaCMS with visual editing is integrated into this website for ease of content updates.
 
-To access the CMS, simply visit the `/admin` route. For example, if your site is deployed route at `https://www.example.com`, to open TinaCMS, go to `https://www.example.com/admin`.
+To access the CMS, simply visit the `/admin` route. For example, if your site is deployed at `https://www.example.com`, to open TinaCMS, go to `https://www.example.com/admin`.
 
 On the development server, you may have to access `/admin/index.html` instead.
 
