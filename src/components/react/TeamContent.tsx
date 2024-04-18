@@ -10,7 +10,7 @@ const TeamContent = (props: { query: string; variables: object; data: any }) => 
         .filter((p: any) => p.status === 'Director')
         .map((p: any) => {
           return (
-            <div data-tina-field={tinaField(p, 'name')} className="mx-auto col-lg-4 col-md-6 col-12 p-2" key={p.name}>
+            <div data-tina-field={tinaField(p, 'name')} className="mx-auto col-lg-3 col-md-4 col-6 p-2" key={p.name}>
               <div className="card h-100">
                 <h2 className="h4 py-3 px-1 text-center">{p.name}</h2>
                 <div className="ratio ratio-1x1">
