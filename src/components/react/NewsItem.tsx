@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import NewsTag from './NewsTag';
 import type { NewsProps } from '../../types';
 import NewsDate from './NewsDate';
 
 const NewsItem = ({ news, isLink = false }: { news: NewsProps; isLink?: boolean }) => {
-  const [reload, setReload] = useState(false);
-  const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
-  useEffect(() => {
-    setReload(true);
-  }, []);
-
   return (
     <div className="d-flex justify-content-center mt-2" key={news.slug}>
       <div className="card" style={{ width: '100%' }}>
