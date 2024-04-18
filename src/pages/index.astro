@@ -18,9 +18,8 @@ const newsToShow = news.sort(sorters['latest']).slice(0, numOfNewsToShow);
 <Layout title="Home">
   <body>
     <main class="container container-base">
-      <HomeContent client:tina {...response} />
-      <h2 class="mt-4">Latest News</h2>
-      <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <h1 class="h2">Latest News</h1>
+      <div id="newsCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
         {
           numOfNewsToShow > 1 && (
             <div class="carousel-indicators">
@@ -81,6 +80,7 @@ const newsToShow = news.sort(sorters['latest']).slice(0, numOfNewsToShow);
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <HomeContent client:tina {...response} />
     </main>
     <Footer />
   </body>
