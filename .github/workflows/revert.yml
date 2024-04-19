@@ -1,0 +1,31 @@
+name: Create pull request on new issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  pr:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ github.token }}
+      - run: |
+          gh issue close $ISSUE
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git switch -C revert-$ISSUE_TITLE
+          git revert --no-commit $ISSUE_TITLE..HEAD
+          git commit -m "Revert to $ISSUE_TITLE"
+          git push -f origin revert-$ISSUE_TITLE
+          gh pr create -B main -H revert-$ISSUE_TITLE --title "Revert to $ISSUE_TITLE" --body "This is automatically created from $ISSUE.
+          Click on 'Merge Pull Request' to confirm the revert."
+          gh issue comment $ISSUE --body "A pull request has been opened for this issue."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          GH_REPO: ${{ github.event.repository.html_url }}

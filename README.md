@@ -1,7 +1,5 @@
 # CivicTech Lab Website
 
-This website is developed using Astro + React + Bootstrap + TinaCMS.
-
 ## TinaCMS
 
 TinaCMS with visual editing is integrated into this website for ease of content updates.
@@ -10,7 +8,23 @@ To access the CMS, simply visit the `/admin` route. For example, if your site is
 
 On the development server, you may have to access `/admin/index.html` instead.
 
+## Reverting to a previous version
+
+The website can be reverted to a previous version by creating an issue on GitHub.
+
+1. Look for the previous commit to revert in the [commits page](../../commits).
+2. Copy the commit number (full SHA) of the commit.
+   ![Step 2](/img/step-2.png)
+3. Enter the issue tab at the [issues tab](../../issues).
+4. Create an issue with the commit number as the title. Click 'Submit new issue'.
+   ![Step 4](img/step-4.png)
+5. The issue will be closed automatically. If a valid commit number is provided, a pull request will be created at the [pull requests tab](../../pulls).
+6. Click on 'Merge Pull Request' to confirm the revert. Otherwise, simply select 'Close pull request' at the bottom of the page to cancel.
+   ![Step 6](img/step-6.png)
+
 ## For developers
+
+This website is developed using Astro + React + Bootstrap + TinaCMS. React is used to enable visual editing on TinaCMS.
 
 ### Getting started
 
@@ -26,7 +40,7 @@ On the development server, you may have to access `/admin/index.html` instead.
 
 ### Deployment
 
-1. The environment variables `TINA_CLIENT_ID` and `TINA_TOKEN` are necessary for a successful deployment. See [Tina Cloud Documentation](https://tina.io/docs/tina-cloud/overview/) for more details.
+1. The environment variables `TINA_CLIENT_ID` and `TINA_TOKEN` are necessary for a successful deployment. The `TINA_SEARCH_TOKEN` is optional, but may be included to enable the search functionality in TinaCMS. See [Tina Cloud Documentation](https://tina.io/docs/tina-cloud/overview/) for more details.
 2. Build the website using `yarn build` and deploy the website using the `dist` folder.
 
 ### Content Files
