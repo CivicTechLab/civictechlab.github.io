@@ -22,6 +22,9 @@ The website can be reverted to a previous version by creating an issue on GitHub
 6. Click on 'Merge Pull Request' to confirm the revert. Otherwise, simply select 'Close pull request' at the bottom of the page to cancel.
    ![Step 6](img/step-6.png)
 
+> [!NOTE]  
+> It is not possible to revert to a version before 19 April 2024 as it will remove the `revert.yml` file.
+
 ## For developers
 
 This website is developed using Astro + React + Bootstrap + TinaCMS. React is used to enable visual editing on TinaCMS.
