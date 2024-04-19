@@ -1,4 +1,6 @@
-# CivicTech Lab Website
+# CivicTechLab Website
+
+![GitHub Pages Deployment](https://github.com/civictechlab/civictechlab.github.io/actions/workflows/deploy.yml/badge.svg)
 
 ## TinaCMS
 
