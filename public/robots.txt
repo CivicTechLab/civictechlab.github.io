@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://civictechlab.org/sitemap-index.xml
