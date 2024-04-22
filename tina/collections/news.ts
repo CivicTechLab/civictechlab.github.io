@@ -109,7 +109,7 @@ const News: Collection = {
       type: 'image',
       label: 'Hero Image',
       name: 'heroImgSrc',
-      description: 'Displays an image below the title.',
+      description: 'Displays an image below the title. This image will also be used for the carousel on the home page.',
     },
     {
       type: 'rich-text',
