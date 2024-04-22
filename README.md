@@ -38,7 +38,7 @@ This website is developed using Astro + React + Bootstrap + TinaCMS. React is us
    ```
    yarn install
    ```
-3. Run the local development server
+3. Run the local development server, defaults to `http://localhost:4321`.
    ```
    yarn dev
    ```
