@@ -83,19 +83,19 @@
       "status": "Alumni"
     },
     {
-      "name": "Tong Tong",
-      "description": "Visiting PhD Student, Tsinghua University",
+      "name": "Dr. Tong Tong",
+      "description": "Visiting PhD Student, Tsinghua University; Assistant Professor, China University of Communication",
       "imgSrc": "/team/tong-tong.png",
       "status": "Alumni"
     },
     {
-      "name": "Zhuo Chen",
+      "name": "Dr, Zhuo Chen",
       "description": "PhD Graduate, 2022; Assistant Professor, HSBC Business School, Peking University",
       "imgSrc": "/team/zhuo-chen.png",
       "status": "Alumni"
     },
     {
-      "name": "Yipeng Xi",
+      "name": "Dr. Yipeng Xi",
       "description": "PhD Graduate 2022; Assistant Professor, Shanghai Jiaotong University",
       "imgSrc": "/team/yipeng-xi.png",
       "status": "Alumni"
@@ -142,8 +142,8 @@
       "status": "Alumni"
     },
     {
-      "name": "Tian Yang",
-      "description": "Master Graduate, 2017; currently doctoral candidate at University of Pennsylvania",
+      "name": "Dr. Tian Yang",
+      "description": "Master Graduate, 2017; Assistant Professor, Chinese University of Hong Kong",
       "imgSrc": "/team/tian-yang.png",
       "status": "Alumni",
       "website": "https://www.asc.upenn.edu/team/graduate-student/tian-yang"
@@ -163,7 +163,7 @@
     },
     {
       "name": "Dr. Simon Perrault",
-      "description": "Postdoc Researcher, 2014-2015; currently Assistant Professor, Singapore University of Science and Technology",
+      "description": "Postdoc Researcher, 2014-2015; Assistant Professor, Singapore University of Science and Technology",
       "imgSrc": "/team/simon-perrault.png",
       "status": "Alumni",
       "website": "https://istd.sutd.edu.sg/team/faculty/simon-perrault#biography"
