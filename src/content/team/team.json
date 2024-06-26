@@ -9,19 +9,19 @@
     },
     {
       "name": "Jingyi Xie",
-      "description": "Master by Research student",
+      "description": "Master by Research student, CNM",
       "imgSrc": "/team/jingyi-xie.png",
       "status": "Current"
     },
     {
       "name": "Ken Tan",
-      "description": "Master By Research student",
+      "description": "Master By Research student, CNM",
       "imgSrc": "/team/ken-tan.png",
       "status": "Current"
     },
     {
       "name": "Gina Fu",
-      "description": "Research Assistant, PhD student",
+      "description": "Research Assistant, PhD student, CNM",
       "imgSrc": "/team/gina-fu.png",
       "status": "Current"
     },
@@ -89,7 +89,7 @@
       "status": "Alumni"
     },
     {
-      "name": "Dr, Zhuo Chen",
+      "name": "Dr. Zhuo Chen",
       "description": "PhD Graduate, 2022; Assistant Professor, HSBC Business School, Peking University",
       "imgSrc": "/team/zhuo-chen.png",
       "status": "Alumni"
