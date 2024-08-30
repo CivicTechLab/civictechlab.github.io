@@ -25,23 +25,11 @@
       "imgSrc": "/team/gina-fu.png",
       "status": "Current"
     },
-    {
-      "name": "Ong Pei Cong Lester",
-      "description": "Research Assistant, Undergrad Student, NUS Computer Science",
-      "imgSrc": "/team/lester-ong.png",
-      "status": "Current",
-      "website": "https://www.lesterong.com"
-    },
+    {},
     {
       "name": "Huazhi Qin",
       "description": "Research Assistant, PhD student, Sociology",
       "imgSrc": "/team/huazhi-qin.png",
-      "status": "Current"
-    },
-    {
-      "name": "Prof. Jing Li",
-      "description": "Visiting Scholar, Associate professor, Journalism Institution, Shanghai Social Science Academy, ANT & Social Critical Theory Studies.",
-      "imgSrc": "/team/jing-li.png",
       "status": "Current"
     },
     {
@@ -57,6 +45,19 @@
       "imgSrc": "/team/odele-tan.png",
       "status": "Alumni",
       "website": "https://readymag.com/odele/portfolio/"
+    },
+    {
+      "name": "Ong Pei Cong Lester",
+      "description": "Research Assistant, Undergrad Student, NUS Computer Science",
+      "imgSrc": "/team/lester-ong.png",
+      "status": "Alumni",
+      "website": "https://www.lesterong.com"
+    },
+    {
+      "name": "Prof. Jing Li",
+      "description": "Visiting Scholar, Associate professor, Journalism Institution, Shanghai Social Science Academy, ANT & Social Critical Theory Studies.",
+      "imgSrc": "/team/jing-li.png",
+      "status": "Current"
     },
     {
       "name": "Wenli Hu",
