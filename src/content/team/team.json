@@ -26,7 +26,10 @@
       "status": "Current"
     },
     {
-      "name": "Bingyan Wang"
+      "name": "Bingyan Wang",
+      "description": "Visiting student; PhD candidate, Department of Political Science, Tsinghua University\n",
+      "imgSrc": "/bingyan.jpg",
+      "status": "Current"
     },
     {
       "name": "Huazhi Qin",
