@@ -14,6 +14,12 @@
       "status": "Current"
     },
     {
+      "name": "Yuheng Wang",
+      "description": "PhD student, CNM, NUS",
+      "imgSrc": "/yuheng.jpg",
+      "status": "Current"
+    },
+    {
       "name": "Ken Tan",
       "description": "Research Assistant, Master By Research graduate, CNM, NUS; PhD Student, NIE ",
       "imgSrc": "/team/ken-tan.png",
@@ -23,12 +29,6 @@
       "name": "Gina Fu",
       "description": "Research Assistant, PhD student, CNM, NUS",
       "imgSrc": "/team/gina-fu.png",
-      "status": "Current"
-    },
-    {
-      "name": "Yuheng Wang",
-      "description": "PhD student, CNM, NUS",
-      "imgSrc": "/yuheng.jpg",
       "status": "Current"
     },
     {
