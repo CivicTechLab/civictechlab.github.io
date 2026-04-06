@@ -15,13 +15,13 @@
     },
     {
       "name": "Yuheng Wang",
-      "description": "PhD student, CNM, NUS",
+      "description": "Research Assistant, PhD student, CNM, NUS",
       "imgSrc": "/yuheng.jpg",
       "status": "Current"
     },
     {
-      "name": "Ken Tan",
-      "description": "Research Assistant, Master By Research graduate, CNM, NUS; PhD Student, NIE ",
+      "name": "Wenchuan Mu",
+      "description": "",
       "imgSrc": "/team/ken-tan.png",
       "status": "Current"
     },
@@ -69,8 +69,8 @@
       "website": "https://www.lesterong.com"
     },
     {
-      "name": "Charlene Chan Mun Yee",
-      "description": "Research Assistant, Undergrad Student, NUS Data science and Analytics",
+      "name": "Ken Tan",
+      "description": "Research Assistant, Master By Research graduate, CNM, NUS; PhD Student, NIE ",
       "imgSrc": "/team/charlene.png",
       "status": "Alumni",
       "website": "https://www.linkedin.com/in/charlene-chan-00/"
