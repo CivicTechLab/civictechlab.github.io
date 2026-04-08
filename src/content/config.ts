@@ -32,7 +32,7 @@ const projectsCollection = defineCollection({
           content: z.string().optional(),
           name: z.string().optional(),
           imgSrc: z.string().optional(),
-          link: z.string().url().optional(),
+          link: z.string().url().optional().or(z.literal('')),
           logos: z
             .array(
               z.object({
@@ -70,7 +70,7 @@ const teamCollection = defineCollection({
         name: z.string().optional(),
         description: z.string().optional(),
         imgSrc: z.string().optional(),
-        website: z.string().url().optional(),
+        website: z.string().url().optional().or(z.literal('')),
         status: z.string().optional(),
       }),
     ),
