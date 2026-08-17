@@ -12,8 +12,13 @@
     },
     {
       "title": "Partner Institutions",
-      "content": "This research was funded by UNSECO, NUS-University of Sydney Partnership Fund, International Development Research Center, Canada through ideacorp, the Philippines and NUS' FASS start-up grant. Any opinions, findings and conclusions or recommendations expressed on this website are those of the authors and do not necessarily reflect the views of the funder.\n",
+      "content": "This research was funded by UNSECO and I4T Knowledge Network, NUS-University of Sydney Partnership Fund, International Development Research Center, Canada through ideacorp, the Philippines and NUS' FASS start-up grant. Any opinions, findings and conclusions or recommendations expressed on this website are those of the authors and do not necessarily reflect the views of the funder.\n",
       "logos": [
+        {
+          "name": "i4t knowledge network",
+          "imgSrc": "/I4TK logo.jpg",
+          "link": "https://www.i4tknowledge.org/"
+        },
         {
           "name": "UNESCO",
           "imgSrc": "/unesco.png",
