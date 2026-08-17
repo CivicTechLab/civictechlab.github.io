@@ -12,8 +12,13 @@
     },
     {
       "title": "Partner Institutions",
-      "content": "This research was funded by NUS-University of Sydney Partnership Fund (R-124-000-102-133), International Development Research Center, Canada through ideacorp, the Philippines (R-124-000-037-597) and NUS' FASS start-up grant (R-124-000-034-133). Any opinions, findings and conclusions or recommendations expressed on this website are those of the authors and do not necessarily reflect the views of the funder.\n",
+      "content": "This research was funded by UNSECO, NUS-University of Sydney Partnership Fund, International Development Research Center, Canada through ideacorp, the Philippines and NUS' FASS start-up grant. Any opinions, findings and conclusions or recommendations expressed on this website are those of the authors and do not necessarily reflect the views of the funder.\n",
       "logos": [
+        {
+          "name": "UNESCO",
+          "imgSrc": "/unesco.png",
+          "link": "https://www.unesco.org/en/internet-trust/guidelines"
+        },
         {
           "name": "IDRC",
           "imgSrc": "/youth-engagement/idrc.png",
@@ -23,26 +28,6 @@
           "name": "University of Sydney",
           "imgSrc": "/youth-engagement/university-of-sydney.png",
           "link": "https://www.sydney.edu.au/"
-        },
-        {
-          "name": "University of Nottingham",
-          "imgSrc": "/youth-engagement/university-of-nottingham.png",
-          "link": "https://www.nottingham.edu.my/index.aspx"
-        },
-        {
-          "name": "University of Chittagong",
-          "imgSrc": "/youth-engagement/university-of-chittagong.png",
-          "link": "https://cu.ac.bd/"
-        },
-        {
-          "name": "University of the Phillippines",
-          "imgSrc": "/youth-engagement/university-of-the-phillippines.png",
-          "link": "https://up.edu.ph/"
-        },
-        {
-          "name": "Indian Institute of Technology",
-          "imgSrc": "/youth-engagement/indian-institute-of-technology-delhi.svg",
-          "link": "https://home.iitd.ac.in/"
         }
       ],
       "_template": "partnerInstitutions"
