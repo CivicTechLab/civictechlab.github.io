@@ -27,8 +27,13 @@
     },
     {
       "title": "Partner Institutions",
-      "content": "This research was funded by Singapore’s Ministry of Education Tier 2 grant (MOE2013-T2-1-105). Any opinions, findings and conclusions or recommendations expressed on this website are those of the authors and do not necessarily reflect the views of the funder.\n",
+      "content": "This research was funded by A\\*Star CATOS and Singapore’s Ministry of Education Tier 2 grant. Any opinions, findings and conclusions or recommendations expressed on this website are those of the authors and do not necessarily reflect the views of the funder.\n",
       "logos": [
+        {
+          "name": "CATOS at A*Star",
+          "imgSrc": "/CATOS logo.jpg",
+          "link": "https://www.catos.sg/"
+        },
         {
           "name": "NUS HCI",
           "imgSrc": "/online-deliberation/nus-hci-lab.png",
