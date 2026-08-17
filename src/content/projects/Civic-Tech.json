@@ -16,13 +16,13 @@
       "logos": [
         {
           "name": "CATOS at A*Star",
-          "imgSrc": "/CATOS logo.jpg",
+          "imgSrc": "",
           "link": "https://www.catos.sg/"
         },
         {
-          "name": "CATOS at AStar",
-          "imgSrc": "/CATOS logo.jpg",
-          "link": "https://www.catos.sg/"
+          "name": "IPS at NUS",
+          "imgSrc": "/cultural-publics/ips.png",
+          "link": "https://lkyspp.nus.edu.sg/ips"
         },
         {
           "name": "SUTD",
