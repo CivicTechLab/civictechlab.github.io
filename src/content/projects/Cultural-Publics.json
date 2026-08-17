@@ -23,11 +23,6 @@
           "name": "University of Pennsylvania",
           "imgSrc": "/cultural-publics/upenn.png",
           "link": "https://www.upenn.edu/"
-        },
-        {
-          "name": "Murdoch University",
-          "imgSrc": "/cultural-publics/murdoch.png",
-          "link": "https://www.murdoch.edu.au/"
         }
       ],
       "_template": "partnerInstitutions"
